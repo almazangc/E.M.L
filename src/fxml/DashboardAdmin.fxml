@@ -81,7 +81,7 @@
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/ProtoAvatar.png" />
+                              <Image url="@../img/man.png" />
                            </image>
                         </ImageView>
                         <Label text="Firstname MI. Lastname" textFill="WHITE" />

@@ -81,7 +81,7 @@
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/ProtoAvatar.png" />
+                              <Image url="@../img/woman.png" />
                            </image>
                         </ImageView>
                         <Label text="Firstname MI. Lastname" textFill="WHITE" />
@@ -101,6 +101,11 @@
                      </font>
                   </Button>
                   <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Comments &amp; Rating" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="20.0" layoutY="442.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Menu List" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>

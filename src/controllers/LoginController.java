@@ -132,7 +132,7 @@ public class LoginController implements Initializable {
                 Main.createAdminDashboard();
             } else if (username.toLowerCase().equals("user") && password.toLowerCase().equals("user")) {
                 LoginMessageLabel.setText("User Login Successful");
-                Main.createAdminDashboard();
+                Main.createUserDashboard();
             } else
                 LoginMessageLabel.setText("Account not found, password invalid");
         } catch (Exception e){
