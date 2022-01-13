@@ -126,13 +126,13 @@ public class Controller implements Initializable {
     }
 
     /**
-     * User password and username input validation
+     * Account Validation
      */
     public void ValidateLogin(){
         System.out.println("Username: " + UsernameTextField.getText() + ", Password: " + PasswordTextField.getText());
         try {
             if(true)
-                createDashboard();
+                Main.createDashboard();
             else
                 System.out.println("Account not found, password invalid");
         } catch (Exception e){
@@ -140,21 +140,5 @@ public class Controller implements Initializable {
             e.getCause();
         }
 
-    }
-
-    /**
-     * Loads DashboardForm
-     */
-    public void createDashboard(){
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("../fxml/Dashboard.fxml"));
-            Stage dashboardStage = new Stage();
-            dashboardStage.setScene(new Scene(root));
-            dashboardStage.initStyle(StageStyle.UNDECORATED);
-            Main.stage = dashboardStage;
-            dashboardStage.show();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
     }
 }

@@ -22,6 +22,20 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+    public static void createDashboard(){
+        try {
+            Parent root = FXMLLoader.load(Main.class.getResource("Dashboard.fxml"));
+            Stage dashboardStage = new Stage();
+            dashboardStage.setScene(new Scene(root));
+            dashboardStage.initStyle(StageStyle.UNDECORATED);
+            Main.stage = dashboardStage;
+            dashboardStage.show();
+        } catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
