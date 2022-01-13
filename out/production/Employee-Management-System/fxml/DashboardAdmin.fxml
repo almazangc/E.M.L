@@ -49,17 +49,17 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
                <children>
-                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Minimize" style="-fx-background-color: #282839;" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Minimize" style="-fx-background-color: #282839;" stylesheets="@../css/LoginStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
                   </Button>
-                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/LoginStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
                   </Button>
-                  <Button id="CloseButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Close" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                  <Button id="CloseButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Close" stylesheets="@../css/LoginStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
@@ -84,35 +84,38 @@
                               <Image url="@../img/man.png" />
                            </image>
                         </ImageView>
-                        <Label text="Firstname MI. Lastname" textFill="WHITE" />
+                        <Label text="Firstname MI. Lastname" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                      </children>
                   </VBox>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Employee List" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Employee List" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Inventory" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Inventory" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Schedule" textFill="WHITE">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Schedule" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Manage Database" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Manage Database" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="300.0" style="-fx-background-color: #2A2A3B;" text="Settings" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="300.0" stylesheets="@../css/DashboardStylesheet.css" text="Settings" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #ED4245;" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button id="logoutButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>

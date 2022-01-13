@@ -1,0 +1,48 @@
+.button{
+    -fx-background-color:  #2A2A3B;
+    -fx-border-color:  #1C1C27;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.button: hover{
+    -fx-background-color: #0984E3;
+    -fx-border-color:   #0984E3;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.button: pressed{
+    -fx-background-color: #0984E3;
+    -fx-border-color:   #0984E3;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.button: focused{
+    -fx-background-color: #0984E3;
+    -fx-border-color:   #0984E3;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+#logoutButton: hover{
+    -fx-background-color: #ED4245;
+    -fx-border-color:   #ED4245;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+#logoutButton: pressed{
+    -fx-background-color: #ED4245;
+    -fx-border-color:   #ED4245;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+#logoutButton: focused{
+    -fx-background-color: #ED4245;
+    -fx-border-color:   #ED4245;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
