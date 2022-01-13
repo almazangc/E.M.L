@@ -65,8 +65,8 @@ public class DashboardController implements Initializable {
 
         TitleBar.setOnMouseDragged(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                Main.stage.setX(event.getScreenX() - xOffset);
-                Main.stage.setY(event.getScreenY() - yOffset);
+                Main.DashboardStage.setX(event.getScreenX() - xOffset);
+                Main.DashboardStage.setY(event.getScreenY() - yOffset);
             }
         });
     }

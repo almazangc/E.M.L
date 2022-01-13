@@ -10,15 +10,16 @@ import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
-    public static Stage stage;
+    public static Stage MainStage;
+    public static Stage DashboardStage;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("LoginForm.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.initStyle(StageStyle.UNDECORATED); //Borderless
 
-        stage = primaryStage;
+        MainStage = primaryStage;
         primaryStage.show();
     }
 
@@ -28,7 +29,7 @@ public class Main extends Application {
             Stage dashboardStage = new Stage();
             dashboardStage.setScene(new Scene(root));
             dashboardStage.initStyle(StageStyle.UNDECORATED);
-            Main.stage = dashboardStage;
+            Main.DashboardStage = dashboardStage;
             dashboardStage.show();
         } catch (Exception e){
             e.printStackTrace();

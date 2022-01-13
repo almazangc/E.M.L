@@ -18,9 +18,10 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class LoginController implements Initializable {
 
     private double xOffset,yOffset = 0;
 
@@ -92,8 +93,8 @@ public class Controller implements Initializable {
 
         TitleBar.setOnMouseDragged(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                Main.stage.setX(event.getScreenX() - xOffset);
-                Main.stage.setY(event.getScreenY() - yOffset);
+                Main.MainStage.setX(event.getScreenX() - xOffset);
+                Main.MainStage.setY(event.getScreenY() - yOffset);
             }
         });
     }
@@ -115,7 +116,6 @@ public class Controller implements Initializable {
     @FXML
     void LoginRequest(MouseEvent event){
         if (UsernameTextField.getLength() > 0 && PasswordTextField.getLength() > 0) {
-            LoginMessageLabel.setText("Password Validation, Login Successful");
             ValidateLogin();
         } else if (UsernameTextField.getLength() == 0 && PasswordTextField.getLength() > 0)
             LoginMessageLabel.setText("Enter Username");
@@ -130,11 +130,14 @@ public class Controller implements Initializable {
      */
     public void ValidateLogin(){
         System.out.println("Username: " + UsernameTextField.getText() + ", Password: " + PasswordTextField.getText());
+        String username = UsernameTextField.getText();
+        String password = PasswordTextField.getText();
         try {
-            if(true)
+            if(username.toLowerCase().equals("admin") && password.toLowerCase().equals("admin")) {
+                LoginMessageLabel.setText("Login Successful");
                 Main.createDashboard();
-            else
-                System.out.println("Account not found, password invalid");
+            } else
+                LoginMessageLabel.setText("Account not found, password invalid");
         } catch (Exception e){
             e.printStackTrace();
             e.getCause();
