@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ApplicationController">
+   <top>
+      <BorderPane fx:id="titleBar" prefHeight="29.0" prefWidth="1280.0" style="-fx-background-color: #202225;" BorderPane.alignment="CENTER">
+         <left>
+            <Label contentDisplay="CENTER" text="Prototype Program" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Monospaced Regular" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </left>
+         <right>
+            <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="min_maxBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#minimizeApplication" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="2.5" right="2.5" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="min_maxBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#maximizeApplication" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="2.5" right="2.5" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="exitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#closeApplication" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="2.5" right="2.5" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+   <bottom>
+      <Pane prefHeight="5.0" prefWidth="1280.0" style="-fx-background-color: #443577;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <Pane fx:id="ContentsPane" prefHeight="686.0" prefWidth="875.0" style="-fx-background-color: #393C42;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="CENTER" prefHeight="686.0" prefWidth="796.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="686.0" prefWidth="338.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="Username" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField promptText="Enter Username" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="303.0">
+                           <children>
+                              <Label text="Password" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <PasswordField promptText="Enter Password" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="353.0" nodeOrientation="RIGHT_TO_LEFT">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" text="Cancel">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin></Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" text="Log in" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="686.0" prefWidth="481.0" style="-fx-background-color: #2F3136;" stylesheets="@../css/ApplicationStylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="-3.0" layoutY="382.0" prefHeight="24.0" prefWidth="485.0" text="Prototype Project" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="408.0" prefHeight="24.0" prefWidth="480.0" text="Management System" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="-6.0" layoutY="621.0" prefHeight="24.0" prefWidth="487.0" text="Copyrights All rights reserved" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="591.0" prefHeight="24.0" prefWidth="482.0" text="By: Proto Tools" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Circle fill="#19242e00" layoutX="243.0" layoutY="186.0" radius="100.0" stroke="#f8f8f8" strokeType="INSIDE" />
+            <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="118.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" layoutY="174.0" prefHeight="24.0" prefWidth="485.0" text="Logo" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

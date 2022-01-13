@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
+   <top>
+      <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10;">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="Application Name" textFill="WHITE">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <children>
+                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Minimize" style="-fx-background-color: #282839;" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="CloseButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Close" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <Pane prefHeight="5.0" style="-fx-background-color: #ED4245;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <HBox alignment="CENTER" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                           <image>
+                              <Image url="@../img/ProtoAvatar.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="APPLICATION NAME" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" fill="WHITE" startX="-100.0" stroke="WHITE" />
+                        <Label text="Login Form" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="30.0">
+                     <children>
+                        <Label text="Copyright 2021" textFill="#00b2ff" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <HBox alignment="CENTER" style="-fx-background-color: #2A2A3B;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label id="LoginMessageLabel" fx:id="LoginMessageLabel" textFill="#00b2ff">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" spacing="15.0">
+                     <children>
+                        <Label text="Username" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField id="UserTextField" fx:id="UsernameTextField" alignment="TOP_CENTER" promptText="Enter username" style="-fx-background-color: #2C2C3E; -fx-border-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-insets: 0; -fx-border-insets: 0;" stylesheets="@../css/ApplicationStylesheet.css" HBox.hgrow="NEVER">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="15.0">
+                     <children>
+                        <Label text="Password " textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <PasswordField id="UserTextField" fx:id="PasswordTextField" alignment="TOP_CENTER" promptText="Enter password" style="-fx-background-color: #2C2C3E; -fx-border-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-insets: 0; -fx-border-insets: 0;" stylesheets="@../css/ApplicationStylesheet.css" HBox.hgrow="NEVER">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </PasswordField>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0">
+                     <children>
+                        <Button id="LoginCancelButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#Cancel" style="-fx-background-color: #0984E3;" stylesheets="@../css/ApplicationStylesheet.css" text="Cancel" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button id="LoginCancelButton" alignment="CENTER" layoutX="132.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#LoginRequest" style="-fx-background-color: #0984E3;" stylesheets="@../css/ApplicationStylesheet.css" text="Login" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="35.0" right="35.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="90.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

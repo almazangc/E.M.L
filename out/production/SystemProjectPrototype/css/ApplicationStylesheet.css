@@ -1,0 +1,48 @@
+.button{
+    -fx-background-color: #202225;
+    -fx-border-color: #202225;
+    -fx-background-radius: 10, 10, 10, 10;
+    -fx-background-insets: 0, 1, 2;
+}
+
+#exitBtn: hover{
+    -fx-text-fill: #202225;
+    -fx-background-color: #ED4245;
+}
+
+#exitBtn: focused{
+    -fx-text-fill: #202225;
+    -fx-background-color: #ED4245;
+}
+
+#exitBtn: pressed{
+    -fx-text-fill: #202225;
+    -fx-background-color: #ED4245;
+}
+
+#min_maxBtn: hover{
+    -fx-text-fill: #6C5CE7;
+    -fx-background-color: #282B2E;
+}
+
+#min_maxBtn: focused{
+    -fx-text-fill: #6C5CE7;
+    -fx-background-color: #282B2E;
+}
+
+#min_maxBtn: pressed{
+    -fx-text-fill: #6C5CE7;
+    -fx-background-color: #282B2E;
+}
+
+.pane {
+ -fx-background-color #393C42;
+}
+
+.vbox {
+ -fx-background-color blue;
+}
+
+label{
+    -fx-text-fill: #6C5CE7;
+}
