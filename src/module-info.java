@@ -4,7 +4,11 @@ module Employee.Management.System {
     requires javafx.fxml;
     requires javafx.graphics;
 
-    opens controllers;
-    opens css;
+    requires mysql.connector.java;
+    requires java.sql;
+
     opens fxml;
+    opens css;
+    opens databaseConnection;
+    opens controllers;
 }
