@@ -90,35 +90,77 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </VBox>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Profile" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button graphicTextGap="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Profile" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Schedule" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button graphicTextGap="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Schedule" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/schedule.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Comments &amp; Rating" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button graphicTextGap="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Comments &amp; Rating" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/rate.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="20.0" layoutY="442.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Menu List" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button graphicTextGap="25.0" layoutX="20.0" layoutY="442.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Menu List" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="300.0" stylesheets="@../css/DashboardStylesheet.css" text="Settings" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button graphicTextGap="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="300.0" stylesheets="@../css/DashboardStylesheet.css" text="Settings" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button id="logoutButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
+                  <Button id="logoutButton" graphicTextGap="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../css/DashboardStylesheet.css" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/log-out.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
                <HBox.margin>
