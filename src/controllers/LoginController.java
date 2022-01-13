@@ -3,22 +3,16 @@ package controllers;
 import fxml.Main;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
-import java.io.IOException;
 import java.net.URL;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
@@ -134,8 +128,11 @@ public class LoginController implements Initializable {
         String password = PasswordTextField.getText();
         try {
             if(username.toLowerCase().equals("admin") && password.toLowerCase().equals("admin")) {
-                LoginMessageLabel.setText("Login Successful");
-                Main.createDashboard();
+                LoginMessageLabel.setText("Admin Login Successful");
+                Main.createAdminDashboard();
+            } else if (username.toLowerCase().equals("user") && password.toLowerCase().equals("user")) {
+                LoginMessageLabel.setText("User Login Successful");
+                Main.createAdminDashboard();
             } else
                 LoginMessageLabel.setText("Account not found, password invalid");
         } catch (Exception e){

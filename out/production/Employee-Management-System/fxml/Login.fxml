@@ -20,7 +20,7 @@
          <children>
             <HBox alignment="CENTER_LEFT">
                <children>
-                  <Label text="Application Name" textFill="WHITE">
+                  <Label text="TEAM NAME" textFill="WHITE">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
@@ -38,7 +38,7 @@
                         <Font name="Marlett" size="12.0" />
                      </font>
                   </Button>
-                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                  <Button id="Min_MaxButton" fx:id="MinMaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
@@ -68,13 +68,13 @@
                               <Image url="@../img/ProtoAvatar.png" />
                            </image>
                         </ImageView>
-                        <Label text="APPLICATION NAME" textFill="WHITE" VBox.vgrow="ALWAYS">
+                        <Label text="RESTAURAN NAME" textFill="WHITE" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
                         <Line endX="100.0" fill="WHITE" startX="-100.0" stroke="WHITE" />
-                        <Label text="Login Form" textFill="WHITE">
+                        <Label text="Management Tool" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -83,7 +83,7 @@
                   </VBox>
                   <VBox alignment="BOTTOM_CENTER" prefHeight="30.0">
                      <children>
-                        <Label text="Copyright 2021" textFill="#00b2ff" VBox.vgrow="ALWAYS">
+                        <Label text="All Rights Reserved | Copyright 2021" textFill="#00b2ff" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -103,6 +103,11 @@
          <children>
             <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
                <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/fingerprint%20(1).png" />
+                     </image>
+                  </ImageView>
                   <Label id="LoginMessageLabel" fx:id="LoginMessageLabel" textFill="#00b2ff">
                      <font>
                         <Font size="15.0" />

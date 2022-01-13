@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -20,6 +21,12 @@ public class DashboardController implements Initializable {
      */
     @FXML
     private HBox TitleBar;
+
+    /**
+     * Fullscreen Button
+     */
+    @FXML
+    private Button MinMaxButton;
 
     /**
      * Close the program on mouseClickEvent
@@ -39,6 +46,10 @@ public class DashboardController implements Initializable {
     void Maximize(MouseEvent event) {
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         stage.setFullScreen(true);
+        if (stage.isFullScreen())
+            MinMaxButton.setText("\uF032");
+        else
+            MinMaxButton.setText("\uF031");
     }
 
     /**

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardController">
+   <top>
+      <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10;">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="DASHBOARD | ADMIN PANEL">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <children>
+                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Minimize" style="-fx-background-color: #282839;" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="CloseButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Close" stylesheets="@../css/ApplicationStylesheet.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <Pane prefHeight="5.0" style="-fx-background-color: #ED4245;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <HBox alignment="CENTER" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ProtoAvatar.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Firstname MI. Lastname" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Employee List" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Inventory" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Schedule" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #2A2A3B;" text="Manage Database" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="300.0" style="-fx-background-color: #2A2A3B;" text="Settings" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #ED4245;" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </left>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #1C1C27;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
