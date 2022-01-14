@@ -112,11 +112,11 @@ public class LoginController implements Initializable {
         if (UsernameTextField.getLength() > 0 && PasswordTextField.getLength() > 0) {
             ValidateLogin();
         } else if (UsernameTextField.getLength() == 0 && PasswordTextField.getLength() > 0)
-            LoginMessageLabel.setText("Enter Username");
+            LoginMessageLabel.setText("Please enter Username");
         else if (UsernameTextField.getLength() > 0 && PasswordTextField.getLength() == 0)
-            LoginMessageLabel.setText("Enter password");
+            LoginMessageLabel.setText("Please enter passcode");
         else
-            LoginMessageLabel.setText("U tried to magik???");
+            LoginMessageLabel.setText("Please enter username and passcode");
     }
 
     /**

@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -80,5 +81,13 @@ public class DashboardController implements Initializable {
                 Main.DashboardStage.setY(event.getScreenY() - yOffset);
             }
         });
+    }
+
+    @FXML
+    private ImageView MenuList;
+
+    @FXML
+    void MenuList_onAction(MouseEvent event) {
+
     }
 }

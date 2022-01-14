@@ -124,7 +124,7 @@
                <children>
                   <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/fingerprint%20(1).png" />
+                        <Image url="@../img/fingerprint.png" />
                      </image>
                   </ImageView>
                   <Label id="LoginMessageLabel" fx:id="LoginMessageLabel" textFill="#00b2ff">
