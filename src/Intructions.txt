@@ -1,0 +1,26 @@
+Create application.java file
+
+    public class application {
+        public static void main(String[] args) {
+            fxml.Main.main(args);
+        }
+    }
+
+    Create a artifacts
+        > File
+            > Project Structure
+                > Jar
+                    > From module dependencies
+                        > select application java
+                            > add javafx bin dll
+
+   Build the jar
+        > Build Tab
+            > Build Artifacts
+                > Build
+
+   Param VM default:
+        --module-path
+        "C:\Users\User\Documents\GitHub\lib\javafx-sdk-17.0.1\lib"
+        --add-modules
+        javafx.controls,javafx.fxml

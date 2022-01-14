@@ -7,7 +7,8 @@ module Employee.Management.System {
     requires javafx.fxml;
     requires javafx.graphics;
 
-    opens fxml;
     opens css;
     opens controllers;
+    opens controllers.dashboardTab;
+    opens fxml;
 }

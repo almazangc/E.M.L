@@ -15,8 +15,14 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LoginController implements Initializable {
+/**
+ * Controls and Manage Login Scene
+ */
+public class Login implements Initializable {
 
+    /**
+     * Use to get and set mouse location on screen for draggin application
+     */
     private double xOffset,yOffset = 0;
 
     /**
@@ -139,6 +145,5 @@ public class LoginController implements Initializable {
             e.printStackTrace();
             e.getCause();
         }
-
     }
 }

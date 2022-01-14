@@ -49,10 +49,10 @@
 }
 
 #LoginCancelButton: hover{
-    -fx-text-fill: #8E44AD;
+    -fx-text-fill: #000000;
     -fx-background-color: #065897;
 }
 
 #UserTextField{
-        -fx-text-fill: White;
+    -fx-text-fill: White;
 }

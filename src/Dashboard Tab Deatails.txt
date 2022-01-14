@@ -1,0 +1,16 @@
+DASHBOARD PANEL
+    USER
+        Employee Profile
+        Schedule
+        Comments & Rating
+        Setting
+        > Log out
+
+    ADMIN
+        Employee List
+        Schedule
+        Inventory
+        Food Menu List
+        Manage Database
+        Setting
+        > Log out
