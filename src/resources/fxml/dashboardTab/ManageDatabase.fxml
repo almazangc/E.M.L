@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="resources.controllers.dashboardTab.ManageDatabase"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #27243D;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.dashboardTab.ManageDatabase">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox style="-fx-background-color: #0078B9;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label alignment="CENTER" text="MANAGE DATABASE | TAB" textFill="WHITE">
+                                       <padding>
+                                          <Insets left="10.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0078B9;" />
+                           </children>
+                        </HBox>
+                        <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="5.0" style="-fx-background-color: White;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="2.0" style="-fx-background-color: #0078B9;" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <Label text="Center" textFill="WHITE" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="2.0" style="-fx-background-color: #0078B9;" BorderPane.alignment="CENTER" />
+         </bottom>
+         <right>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="2.0" style="-fx-background-color: #0078B9;" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</VBox>

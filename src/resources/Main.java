@@ -20,6 +20,8 @@ public class Main extends Application {
     public static Stage MainStage;
     public static Stage DashboardStage;
 
+    public static BorderPane borderpane;
+
     private static Stage stage;
     private static Scene scene;
     private static Parent root;

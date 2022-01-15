@@ -26,7 +26,8 @@ public class Dashboard implements Initializable {
      * Border pane of dashboard
      */
     @FXML
-    public BorderPane dashboard_BorderPane;
+    private BorderPane dashboard_BorderPane;
+
 
     /**
      * Application Title Bar
@@ -116,7 +117,7 @@ public class Dashboard implements Initializable {
     @FXML
     void profileOnClick(MouseEvent event) {
         System.out.println("EVENT: Profile");
-        Main.loadUI("Profile" , dashboard_BorderPane);
+        Main.loadUI("EmployeeProfile" , dashboard_BorderPane);
     }
 
     /**
