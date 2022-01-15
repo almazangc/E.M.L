@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
- * Controls and Manage Login Scene
+ * Handles Login actions and events
  */
 public class Login implements Initializable {
 

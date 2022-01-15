@@ -18,6 +18,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Handles dashboard actions and events
+ */
 public class Dashboard implements Initializable {
 
     private double xOffset,yOffset = 0;

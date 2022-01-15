@@ -9,12 +9,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import resources.controllers.Dashboard;
 
 import java.io.IOException;
 import java.util.Objects;
 
-
+/**
+ * Employee restaurant manager
+ * @author Gilbert Almazan
+ *
+ */
 public class Main extends Application {
 
     public static Stage MainStage;
