@@ -23,6 +23,9 @@ import java.util.ResourceBundle;
  */
 public class Dashboard implements Initializable {
 
+    /**
+     * Variable for storing mouse x and y coordinate on the monitor
+     */
     private double xOffset,yOffset = 0;
 
     /**
@@ -196,6 +199,7 @@ public class Dashboard implements Initializable {
     /**
      * Logout user from dashboard
      * @param event on mouse click
+     * @throws IOException errors
      */
     @FXML
     void logoutOnClick(MouseEvent event) throws IOException {

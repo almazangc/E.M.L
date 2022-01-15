@@ -126,7 +126,8 @@ public class Login implements Initializable {
     }
 
     /**
-     * Account Validation
+     * Login credential validation method
+     * @param event login on mouse click
      */
     public void ValidateLogin(MouseEvent event) {
         System.out.println("Username: " + UsernameTextField.getText() + ", Password: " + PasswordTextField.getText());

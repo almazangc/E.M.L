@@ -19,16 +19,33 @@ import java.util.Objects;
  *
  */
 public class Main extends Application {
-
+    /**
+     * Stage declaration for passing non static stage
+     */
     public static Stage MainStage;
+    /**
+     * Stage declaration for passing non static stage for dashboard
+     */
     public static Stage DashboardStage;
 
-    public static BorderPane borderpane;
-
+    /**
+     * Stage declaration
+     */
     private static Stage stage;
+    /**
+     * Scene declaration
+     */
     private static Scene scene;
+    /**
+     * Parent declaration
+     */
     private static Parent root;
 
+    /**
+     * Start up program
+     * @param primaryStage stage to be loaded
+     * @throws Exception in case of some error
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("fxml/Login.fxml")));
@@ -43,6 +60,7 @@ public class Main extends Application {
      * load a dashboard depending on what type of account is logged in
      * @param event on mouse click login button
      * @param type type of dashboard loaded
+     * @throws IOException errors
      */
     public static void loadDashboard(MouseEvent event, String type) throws IOException{
         try {
@@ -64,6 +82,7 @@ public class Main extends Application {
     /**
      * Loads login form when logout button is clicked
      * @param event on mouse click
+     * @throws IOException errors
      */
     public static void logOut(MouseEvent event) throws IOException{
         try {
@@ -81,7 +100,8 @@ public class Main extends Application {
 
     /**
      * Loads a selected a tab on a dashboard
-     * @param fileName file name of fxml being loaded on boarder pane center of a dashboard
+     * @param fileName fxml being loaded on boarder pane center of a dashboard
+     * @param borderPane reference for dashboard border pane to set fxml on center
      */
     public static void loadUI(String fileName, BorderPane borderPane){
         Parent root = null;
@@ -92,6 +112,11 @@ public class Main extends Application {
         }
         borderPane.setCenter(root);
     }
+
+    /**
+     * Launch program at start
+     * @param args arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }

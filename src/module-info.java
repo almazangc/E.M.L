@@ -1,3 +1,6 @@
+/**
+ * Program Module Requirement in order to Run without errors
+ */
 module Employee.Management.System {
 
     /**
