@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -17,13 +19,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245;" stylesheets="@../css/Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.Login">
+<BorderPane prefHeight="400.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245; -fx-background-radius: 10 10 0 0; -fx-border-radius: 10 10 0 0;" stylesheets="@../css/Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.Login">
    <top>
-      <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10;" stylesheets="@../css/Login.css">
+      <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10 10 0 0;" stylesheets="@../css/Login.css">
          <children>
             <HBox alignment="CENTER_LEFT" stylesheets="@../css/Login.css">
                <children>
-                  <Label text="TEAM NAME">
+                  <Label text="Application">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
@@ -43,6 +45,13 @@
                            </stops>
                         </LinearGradient>
                      </textFill>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ApplicationProtoLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Label>
                </children>
             </HBox>
@@ -56,20 +65,35 @@
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button id="Min_MaxButton" fx:id="MinMaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/Login.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button id="CloseButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onMouseClicked="#Close" stylesheets="@../css/Login.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
             </HBox>
          </children>
+         <cursor>
+            <Cursor fx:constant="MOVE" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
       </HBox>
    </top>
    <bottom>
@@ -118,14 +142,17 @@
       </HBox>
    </left>
    <center>
-      <HBox alignment="CENTER" style="-fx-background-color: #2A2A3B;" stylesheets="@../css/Login.css" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" stylesheets="@../css/Login.css" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" spacing="10.0">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/fingerprint.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                   <Label id="LoginMessageLabel" fx:id="LoginMessageLabel" textFill="#00b2ff">
                      <font>
@@ -149,6 +176,9 @@
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
                         </TextField>
                      </children>
                      <VBox.margin>
@@ -157,7 +187,7 @@
                   </HBox>
                   <HBox alignment="CENTER" spacing="15.0">
                      <children>
-                        <Label text="Passcode" textFill="WHITE" HBox.hgrow="ALWAYS">
+                        <Label text="Passcode " textFill="WHITE" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -165,10 +195,13 @@
                               <Font size="15.0" />
                            </font>
                         </Label>
-                        <PasswordField id="UserTextField" fx:id="PasswordTextField" alignment="TOP_CENTER" promptText="Enter passcode" style="-fx-background-color: #2C2C3E; -fx-border-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-insets: 0; -fx-border-insets: 0;" stylesheets="@../css/Login.css" HBox.hgrow="NEVER">
+                        <PasswordField id="UserTextField" fx:id="PasswordTextField" alignment="TOP_CENTER" onKeyPressed="#PasswordTextField_KeyPressed" promptText="Enter passcode" style="-fx-background-color: #2C2C3E; -fx-border-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-insets: 0; -fx-border-insets: 0;" stylesheets="@../css/Login.css" HBox.hgrow="NEVER">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
                         </PasswordField>
                      </children>
                      <VBox.margin>
@@ -181,11 +214,31 @@
                            <font>
                               <Font size="15.0" />
                            </font>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.01568627543747425" green="0.2078431397676468" blue="0.35686275362968445" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Button>
                         <Button id="LoginCancelButton" alignment="CENTER" layoutX="132.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#LoginRequest" style="-fx-background-color: #0984E3;" stylesheets="@../css/Login.css" text="Login" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
                            </font>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.01568627543747425" green="0.2078431397676468" blue="0.35686275362968445" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Button>
                      </children>
                      <VBox.margin>

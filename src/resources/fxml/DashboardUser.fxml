@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -14,9 +17,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="dashboard_BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.Dashboard">
+<BorderPane fx:id="dashboard_BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245; -fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.Dashboard">
    <top>
-      <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10;">
+      <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10 10 10 0;">
          <children>
             <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
@@ -25,6 +28,9 @@
                <image>
                   <Image url="@../img/list.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <HBox alignment="CENTER_LEFT">
                <children>
@@ -61,24 +67,39 @@
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button id="Min_MaxButton" fx:id="MinMaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/Login.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button id="CloseButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Close" stylesheets="@../css/Login.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
             </HBox>
          </children>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="MOVE" />
+         </cursor>
       </HBox>
    </top>
    <bottom>
-      <Pane prefHeight="5.0" style="-fx-background-color: #ED4245;" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="5.0" style="-fx-background-color: #ED4245; -fx-background-radius: 0 0 10 10;" BorderPane.alignment="CENTER" />
    </bottom>
    <left>
       <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
@@ -96,6 +117,16 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Profile">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
                   </Button>
                   <Button layoutX="20.0" layoutY="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#scheduleOnClick" stylesheets="@../css/Dashboard.css">
                      <graphic>
@@ -105,6 +136,16 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Schedule">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
                   </Button>
                   <Button layoutX="20.0" layoutY="532.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#comments_ratingOnCLick" stylesheets="@../css/Dashboard.css">
                      <graphic>
@@ -114,6 +155,16 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Evaluation">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
                   </Button>
                   <Button layoutX="20.0" layoutY="708.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#settingOnClick" stylesheets="@../css/Dashboard.css">
                      <graphic>
@@ -123,6 +174,16 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Settings">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
                   </Button>
                   <Button id="logoutButton" layoutX="20.0" layoutY="641.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#logoutOnClick" stylesheets="@../css/Dashboard.css">
                      <graphic>
@@ -132,10 +193,13 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
                <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets left="5.0" right="5.0" />
                </padding>
             </VBox>
          </children>

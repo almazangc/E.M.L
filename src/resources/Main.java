@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -49,9 +50,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("fxml/Login.fxml")));
-        primaryStage.setScene(new Scene(root));
-        primaryStage.initStyle(StageStyle.UNDECORATED); //Borderless
-
+        scene = new Scene(root, Color.TRANSPARENT); //changes
+        primaryStage.setScene(scene); // new Scene(root)
+        primaryStage.initStyle(StageStyle.TRANSPARENT); //Borderless
         MainStage = primaryStage;
         primaryStage.show();
     }
@@ -70,7 +71,7 @@ public class Main extends Application {
                 root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/DashboardUser.fxml")));
 
             stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
+            scene = new Scene(root, Color.TRANSPARENT);
             stage.setScene(scene);
             Main.DashboardStage = stage;
             stage.show();

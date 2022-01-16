@@ -24,3 +24,10 @@ Create application.java file
         "C:\Users\User\Documents\GitHub\lib\javafx-sdk-17.0.1\lib"
         --add-modules
         javafx.controls,javafx.resources.fxml
+
+
+        linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #545479ff 0.0%, #c0a2fcff 100.0%)
+        new LinearGradient(
+        0.0,0.0,1.0,1.0,true,CycleMethod.NO_CYCLE,
+        new Stop(0.0,new Color( 0.33, 0.33, 0.47, 1.0)),
+        new Stop(1.0,new Color( 0.75, 0.64, 0.99, 1.0)));

@@ -1,18 +1,26 @@
 package resources.controllers;
 
 import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import resources.Main;
+import resources.database.DatabaseConnection;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 /**
@@ -114,10 +122,10 @@ public class Login implements Initializable {
      * @param event login button click
      */
     @FXML
-    void LoginRequest(MouseEvent event){
-        if (UsernameTextField.getLength() > 0 && PasswordTextField.getLength() > 0) {
+    void LoginRequest(MouseEvent event) throws SQLException, IOException {
+        if (UsernameTextField.getLength() > 0 && PasswordTextField.getLength() > 0)
             ValidateLogin(event);
-        } else if (UsernameTextField.getLength() == 0 && PasswordTextField.getLength() > 0)
+        else if (UsernameTextField.getLength() == 0 && PasswordTextField.getLength() > 0)
             LoginMessageLabel.setText("Please enter Username");
         else if (UsernameTextField.getLength() > 0 && PasswordTextField.getLength() == 0)
             LoginMessageLabel.setText("Please enter passcode");
@@ -126,25 +134,37 @@ public class Login implements Initializable {
     }
 
     /**
+     * Calls login button on click when pressed enter
+     * @param event
+     */
+    @FXML
+    void PasswordTextField_KeyPressed(KeyEvent event) {
+//        LoginRequest(MouseEvent event);
+    }
+
+    /**
      * Login credential validation method
      * @param event login on mouse click
      */
-    public void ValidateLogin(MouseEvent event) {
-        System.out.println("Username: " + UsernameTextField.getText() + ", Password: " + PasswordTextField.getText());
-        String username = UsernameTextField.getText();
-        String password = PasswordTextField.getText();
-        try {
-            if(username.toLowerCase().equals("admin") && password.toLowerCase().equals("admin")) {
-                LoginMessageLabel.setText("Admin Login Successful");
-                Main.loadDashboard(event, "admin");
-            } else if (username.toLowerCase().equals("user") && password.toLowerCase().equals("user")) {
-                LoginMessageLabel.setText("User Login Successful");
-                Main.loadDashboard(event, "user");
-            } else
-                LoginMessageLabel.setText("Account not found, password invalid");
-        } catch (Exception e){
-            e.printStackTrace();
-            e.getCause();
+    private void ValidateLogin(MouseEvent event) throws SQLException, IOException {
+        String username, password;
+        username = UsernameTextField.getText();
+        password = PasswordTextField.getText();
+        System.out.println("Username: " + username + ", Password: " + password);
+
+        Connection connection = DatabaseConnection.getInstance().getConnection();
+
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("select * from employee where username = '" + username + "' and passcode = '" + password + "'");
+
+        if (resultSet.next()){
+
+            Main.loadDashboard(event, "user");
+        } else {
+            LoginMessageLabel.setText("Login failed!");
         }
     }
+
+
+
 }

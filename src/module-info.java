@@ -10,7 +10,11 @@ module Employee.Management.System {
     requires javafx.fxml;
     requires javafx.graphics;
 
-    opens resources.css;
+    /**
+     * Sql lite driver
+     */
+    requires java.sql;
+
     opens resources.controllers;
     opens resources.controllers.dashboardTab;
     opens resources.fxml;
