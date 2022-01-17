@@ -11,10 +11,9 @@ module Employee.Management.System {
     requires javafx.graphics;
 
     /**
-     * Sql lite driver
+     * Sql lite jdbc
      */
     requires java.sql;
-    requires java.sql.rowset;
 
     opens resources;
     opens resources.controllers;

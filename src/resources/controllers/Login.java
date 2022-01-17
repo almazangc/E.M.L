@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -55,6 +56,12 @@ public class Login implements Initializable {
      */
     @FXML
     private TextField UsernameTextField;
+
+    /**
+     * Just for debugging
+     */
+    @FXML
+    private TextArea consoleError;
 
     /**
      * Close the program on mouseClickEvent
@@ -109,6 +116,7 @@ public class Login implements Initializable {
     void Cancel() {
         UsernameTextField.clear();
         PasscodeTextField.clear();
+        consoleError.clear();
     }
 
     /**
@@ -117,9 +125,10 @@ public class Login implements Initializable {
      */
     @FXML
     void LoginRequest(MouseEvent event) throws SQLException, IOException {
-        if (UsernameTextField.getLength() > 0 && PasscodeTextField.getLength() > 0)
+        if (UsernameTextField.getLength() > 0 && PasscodeTextField.getLength() > 0) {
+            consoleError.setText(consoleError.getText() + "Validating Login Credential");
             ValidateLogin(event);
-        else if (UsernameTextField.getLength() == 0 && PasscodeTextField.getLength() > 0)
+        } else if (UsernameTextField.getLength() == 0 && PasscodeTextField.getLength() > 0)
             LoginMessageLabel.setText("Please enter Username");
         else if (UsernameTextField.getLength() > 0 && PasscodeTextField.getLength() == 0)
             LoginMessageLabel.setText("Please enter passcode");
@@ -140,24 +149,34 @@ public class Login implements Initializable {
      * @param event login on mouse click
      */
     private void ValidateLogin(MouseEvent event) throws SQLException {
+        consoleError.setText(consoleError.getText() + "\nValidate Login Method Called");
+
         String username, passcode;
         username = UsernameTextField.getText();
         passcode = PasscodeTextField.getText();
+        consoleError.setText(consoleError.getText() + "\nLogin Credentials-> Username (" + username + "), Passcode(" + passcode + ")");
+
 
         Connection connection = DatabaseConnection.getInstance().getConnection();
         Statement statement = null;
         ResultSet resultSet = null;
         String sql_validate = "select accountType from employee where username = '" + username + "' and passcode = '" + passcode + "'";
 
+        consoleError.setText(consoleError.getText() + "\nConnection: " + connection.toString());
+
         try {
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql_validate);
+
+            consoleError.setText(consoleError.getText() + "\nEntered Try");
+
                 if (resultSet.next()){
                     int accountType = resultSet.getInt("accountType");
                     Main.loadDashboard(event, accountType);
-
                     Main.AccountInfo = new global_variable(username, passcode);
                     Main.AccountInfo.displayAllUserInformation();
+
+                    consoleError.setText(consoleError.getText() + "\nDashboard Load");
                 } else {
                     LoginMessageLabel.setText("Login failed!");
                 }
@@ -167,11 +186,9 @@ public class Login implements Initializable {
                 statement.close();
                 resultSet.close();
             } catch (SQLException e){
+                consoleError.setText(consoleError.getText() + "\nSQL Exception: " + e.toString());
                 System.out.println(e);
             }
         }
     }
-
-
-
 }

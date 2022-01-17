@@ -8,27 +8,59 @@ import java.sql.*;
  * Class Containing Recently Logged Account
  */
 public class global_variable {
+    /**
+     * Logged Account ID
+     */
     private int id;
+    /**
+     * Logged Account First name
+     */
     private String firstName;
+    /**
+     * Logged Account Middle Initial
+     */
     private String middleInitial;
+    /**
+     * Logged Account Last name
+     */
     private String lastName;
+    /**
+     * Logged Account Profile Picture
+     */
     private Blob profileImage;
+    /**
+     * Logged Account Type
+     */
     private int accountType;
+    /**
+     * Logged Account Job Position
+     */
     private String jobPosition;
+    /**
+     * Logged Account Job Contract Type
+     */
     private String contractType;
+    /**
+     * Logged Account Rating
+     */
     private int rating;
+    /**
+     * Logged Account Comments
+     */
     private String comments;
+    /**
+     * Logged Account Suggestion
+     */
     private String suggestion;
 
+    /**
+     * Constructor for initializing values of declared variables
+     * @param username validated account
+     * @param passcode of validated account
+     * @throws SQLException sql exception error
+     */
     public global_variable(String username, String passcode) throws SQLException {
         global_variable(username, passcode);
-    }
-
-    /**
-     * Default Constructor
-     */
-    void global_variable(){
-
     }
 
     /**
@@ -67,54 +99,93 @@ public class global_variable {
         }
     }
 
+    /**
+     * @return ID
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @return First name
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     * @return Middle initial
+     */
     public String getMiddleInitial() {
         return middleInitial;
     }
 
+    /**
+     * @return Last name
+     */
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     * @return blob profile picture
+     */
     public Blob getProfileImage() {
         return profileImage;
     }
 
+    /**
+     * @return type of account
+     */
     public int getAccountType() {
         return accountType;
     }
 
+    /**
+     * @return job position
+     */
     public String getJobPosition() {
         return jobPosition;
     }
 
+    /**
+     * @return job contract type
+     */
     public String getContractType() {
         return contractType;
     }
 
+    /**
+     * @return firstname, middleInitial, and lastname string concat
+     */
     public String getCompleteName() {
         return this.firstName + " " + this.middleInitial + ". " + this.lastName;
     }
 
+    /**
+     * @return boss rating
+     */
     public int getRating() {
         return rating;
     }
 
+    /**
+     * @return manager comments
+     */
     public String getComments() {
         return comments;
     }
 
+    /**
+     * @return manager suggestion
+     */
     public String getSuggestion() {
         return suggestion;
     }
 
+    /**
+     * Sout information gotta remove later
+     */
     public void displayAllUserInformation(){
         System.out.println("Complete Name: " + getCompleteName() +
                             "\nRating: " + getRating() +

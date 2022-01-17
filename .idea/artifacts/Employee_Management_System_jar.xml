@@ -11,7 +11,16 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/../lib/javafx-sdk-17.0.1/lib/javafx.swing.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../lib/javafx-sdk-17.0.1/lib/javafx.controls.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../lib/javafx-sdk-17.0.1/lib/javafx.graphics.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/org/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/org/sqlite/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/org/sqlite/core/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/org/sqlite/date/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/org/sqlite/javax/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/org/sqlite/jdbc3/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/org/sqlite/jdbc4/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/org/sqlite/native/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sqliteJDBC/sqlite-jdbc-3.36.0.3.jar" path-in-jar="/org/sqlite/util/" />
       <element id="file-copy" path="$PROJECT_DIR$/../lib/javafx-sdk-17.0.1/bin/api-ms-win-core-console-l1-1-0.dll" />
       <element id="file-copy" path="$PROJECT_DIR$/../lib/javafx-sdk-17.0.1/bin/api-ms-win-core-console-l1-2-0.dll" />
       <element id="file-copy" path="$PROJECT_DIR$/../lib/javafx-sdk-17.0.1/bin/api-ms-win-core-datetime-l1-1-0.dll" />

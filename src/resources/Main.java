@@ -10,6 +10,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import resources.controllers.Dashboard;
 import resources.modules.global_variable;
 
 import java.io.IOException;
@@ -68,7 +69,7 @@ public class Main extends Application {
     }
 
     /**
-     * load a dashboard depending on what type of account is logged in
+     * Loads a dashboard depending on what type of account is logged in
      * @param event on mouse click login button
      * @param type type of dashboard loaded
      */
@@ -84,6 +85,7 @@ public class Main extends Application {
             stage.setScene(scene);
             DashboardStage = stage;
             dashboardType = type;
+            Dashboard.setDefault();
             stage.show();
         } catch (Exception e){
             e.getCause();

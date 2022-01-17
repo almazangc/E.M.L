@@ -11,7 +11,6 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import resources.Main;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -31,6 +30,10 @@ public class Dashboard implements Initializable {
     @FXML
     private BorderPane dashboard_BorderPane;
 
+    /**
+     * Static borderPane for dashboard_BorderPane
+     */
+    private static BorderPane borderPane;
 
     /**
      * Application Title Bar
@@ -83,8 +86,7 @@ public class Dashboard implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        String defaultTab = (Main.dashboardType == 0 ? "EmployeeProfile" : "EmployeeList");
-//        Main.loadUI(defaultTab , dashboard_BorderPane);
+        borderPane = dashboard_BorderPane; //initializing borderPane
         TitleBar.setOnMousePressed(event -> {
             xOffset = event.getSceneX();
             yOffset = event.getSceneY();
@@ -191,5 +193,13 @@ public class Dashboard implements Initializable {
         //No prompt message
         System.out.println("Logged out");
         Main.logOut(event);
+    }
+
+    /**
+     * Set Default Tab of Dashboard
+     */
+    public static void setDefault(){
+        String defaultTab = (Main.dashboardType == 0 ? "EmployeeProfile" : "EmployeeList");
+        Main.loadUI(defaultTab , borderPane);
     }
 }

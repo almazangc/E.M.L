@@ -13,7 +13,7 @@ public class DatabaseConnection {
      * Database Default Constructor
      */
     private DatabaseConnection(){
-
+        //Creates a Database Connection Instance
     }
 
     /**
