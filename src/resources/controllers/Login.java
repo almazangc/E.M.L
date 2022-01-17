@@ -1,7 +1,5 @@
 package resources.controllers;
 
-import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -14,6 +12,7 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import resources.Main;
 import resources.database.DatabaseConnection;
+import resources.modules.global_variable;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,7 +28,7 @@ import java.util.ResourceBundle;
 public class Login implements Initializable {
 
     /**
-     * Use to get and set mouse location on screen for draggin application
+     * Use to get and set mouse location on screen for dragging application
      */
     private double xOffset,yOffset = 0;
 
@@ -49,7 +48,7 @@ public class Login implements Initializable {
      * Password Field
      */
     @FXML
-    private PasswordField PasswordTextField;
+    private PasswordField PasscodeTextField;
 
     /**
      * Username Field
@@ -92,29 +91,24 @@ public class Login implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        TitleBar.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent event) {
-                xOffset = event.getSceneX();
-                yOffset = event.getSceneY();
-            }
+        TitleBar.setOnMousePressed(event -> {
+            xOffset = event.getSceneX();
+            yOffset = event.getSceneY();
         });
 
-        TitleBar.setOnMouseDragged(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent event) {
-                Main.MainStage.setX(event.getScreenX() - xOffset);
-                Main.MainStage.setY(event.getScreenY() - yOffset);
-            }
+        TitleBar.setOnMouseDragged(event -> {
+            Main.MainStage.setX(event.getScreenX() - xOffset);
+            Main.MainStage.setY(event.getScreenY() - yOffset);
         });
     }
 
     /**
      * Clear username and password field inputs
-     * @param event cancel button click
      */
     @FXML
-    void Cancel(MouseEvent event) {
+    void Cancel() {
         UsernameTextField.clear();
-        PasswordTextField.clear();
+        PasscodeTextField.clear();
     }
 
     /**
@@ -123,11 +117,11 @@ public class Login implements Initializable {
      */
     @FXML
     void LoginRequest(MouseEvent event) throws SQLException, IOException {
-        if (UsernameTextField.getLength() > 0 && PasswordTextField.getLength() > 0)
+        if (UsernameTextField.getLength() > 0 && PasscodeTextField.getLength() > 0)
             ValidateLogin(event);
-        else if (UsernameTextField.getLength() == 0 && PasswordTextField.getLength() > 0)
+        else if (UsernameTextField.getLength() == 0 && PasscodeTextField.getLength() > 0)
             LoginMessageLabel.setText("Please enter Username");
-        else if (UsernameTextField.getLength() > 0 && PasswordTextField.getLength() == 0)
+        else if (UsernameTextField.getLength() > 0 && PasscodeTextField.getLength() == 0)
             LoginMessageLabel.setText("Please enter passcode");
         else
             LoginMessageLabel.setText("Please enter username and passcode");
@@ -135,7 +129,6 @@ public class Login implements Initializable {
 
     /**
      * Calls login button on click when pressed enter
-     * @param event
      */
     @FXML
     void PasswordTextField_KeyPressed(KeyEvent event) {
@@ -146,22 +139,36 @@ public class Login implements Initializable {
      * Login credential validation method
      * @param event login on mouse click
      */
-    private void ValidateLogin(MouseEvent event) throws SQLException, IOException {
-        String username, password;
+    private void ValidateLogin(MouseEvent event) throws SQLException {
+        String username, passcode;
         username = UsernameTextField.getText();
-        password = PasswordTextField.getText();
-        System.out.println("Username: " + username + ", Password: " + password);
+        passcode = PasscodeTextField.getText();
 
         Connection connection = DatabaseConnection.getInstance().getConnection();
+        Statement statement = null;
+        ResultSet resultSet = null;
+        String sql_validate = "select accountType from employee where username = '" + username + "' and passcode = '" + passcode + "'";
 
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("select * from employee where username = '" + username + "' and passcode = '" + password + "'");
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql_validate);
+                if (resultSet.next()){
+                    int accountType = resultSet.getInt("accountType");
+                    Main.loadDashboard(event, accountType);
 
-        if (resultSet.next()){
-
-            Main.loadDashboard(event, "user");
-        } else {
-            LoginMessageLabel.setText("Login failed!");
+                    Main.AccountInfo = new global_variable(username, passcode);
+                    Main.AccountInfo.displayAllUserInformation();
+                } else {
+                    LoginMessageLabel.setText("Login failed!");
+                }
+        } finally {
+            try {
+                connection.close();
+                statement.close();
+                resultSet.close();
+            } catch (SQLException e){
+                System.out.println(e);
+            }
         }
     }
 

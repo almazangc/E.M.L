@@ -1,21 +1,13 @@
 package resources.controllers;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.CycleMethod;
-import javafx.scene.paint.LinearGradient;
-import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
 import resources.Main;
 
@@ -91,18 +83,16 @@ public class Dashboard implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        TitleBar.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent event) {
-                xOffset = event.getSceneX();
-                yOffset = event.getSceneY();
-            }
+//        String defaultTab = (Main.dashboardType == 0 ? "EmployeeProfile" : "EmployeeList");
+//        Main.loadUI(defaultTab , dashboard_BorderPane);
+        TitleBar.setOnMousePressed(event -> {
+            xOffset = event.getSceneX();
+            yOffset = event.getSceneY();
         });
 
-        TitleBar.setOnMouseDragged(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent event) {
-                Main.DashboardStage.setX(event.getScreenX() - xOffset);
-                Main.DashboardStage.setY(event.getScreenY() - yOffset);
-            }
+        TitleBar.setOnMouseDragged(event -> {
+            Main.DashboardStage.setX(event.getScreenX() - xOffset);
+            Main.DashboardStage.setY(event.getScreenY() - yOffset);
         });
     }
 
@@ -114,89 +104,80 @@ public class Dashboard implements Initializable {
 
     /**
      * Show and hides navigation tab
-     * @param event onAction
      */
     @FXML
-    void MenuList_onAction(MouseEvent event) {
+    void MenuList_onAction() {
         System.out.println("EVENT: NAV BAR");
     }
 
     /**
      * Loads profile fxml in user dashboard
-     * @param event on mouse click
      */
     @FXML
-    void profileOnClick(MouseEvent event) {
+    void profileOnClick() {
         System.out.println("EVENT: Profile");
         Main.loadUI("EmployeeProfile" , dashboard_BorderPane);
     }
 
     /**
      * Loads employeeList fxml on admin dashboard
-     * @param event on mouse click
      */
     @FXML
-    void employeeListOnClick(MouseEvent event) {
+    void employeeListOnClick() {
         System.out.println("EVENT: Employee List");
         Main.loadUI("EmployeeList" , dashboard_BorderPane);
     }
 
     /**
      * Loads schedule fxml on user and admin dashboard
-     * @param event on mouse click
      */
     @FXML
-    void scheduleOnClick(MouseEvent event) {
+    void scheduleOnClick() {
         System.out.println("EVENT: Schedule");
         Main.loadUI("Schedule" , dashboard_BorderPane);
     }
 
     /**
      * Loads comments and rating fxml on user dashboard
-     * @param event on mouse click
      */
     @FXML
-    void comments_ratingOnCLick(MouseEvent event) {
+    void comments_ratingOnCLick() {
         System.out.println("EVENT: Comments and Rating");
         Main.loadUI("CommentsRating" , dashboard_BorderPane);
     }
 
     /**
      * Loads inventory  fxml on admin dashboard
-     * @param event on mouse click
      */
     @FXML
-    void inventoryOnClick(MouseEvent event) {
+    void inventoryOnClick() {
         System.out.println("EVENT: Inventory");
         Main.loadUI("Inventory" , dashboard_BorderPane);
     }
 
     /**
      * Loads food menu on admin dashboard
-     * @param event on mouse click
      */
     @FXML
-    void foodMenuOnClick(MouseEvent event) {
+    void foodMenuOnClick() {
         System.out.println("EVENT: Food Menu");
         Main.loadUI("FoodMenuList" , dashboard_BorderPane);
     }
 
     /**
      * Loads manage database fxml on admin dashboard
-     * @param event on mouse click
      */
     @FXML
-    void manageDbOnClick(MouseEvent event) {
+    void manageDbOnClick() {
         System.out.println("EVENT: DB management");
         Main.loadUI("ManageDatabase" , dashboard_BorderPane);
     }
 
     /**
      * Load setting fxml on admin dashboard
-     * @param event on mouse click
      */
     @FXML
-    void settingOnClick(MouseEvent event) {
+    void settingOnClick() {
         System.out.println("EVENT: Settings");
         Main.loadUI("Settings" , dashboard_BorderPane);
     }
@@ -204,10 +185,9 @@ public class Dashboard implements Initializable {
     /**
      * Logout user from dashboard
      * @param event on mouse click
-     * @throws IOException errors
      */
     @FXML
-    void logoutOnClick(MouseEvent event) throws IOException {
+    void logoutOnClick(MouseEvent event) {
         //No prompt message
         System.out.println("Logged out");
         Main.logOut(event);

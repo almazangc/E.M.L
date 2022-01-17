@@ -10,6 +10,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import resources.modules.global_variable;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -41,6 +42,15 @@ public class Main extends Application {
      * Parent declaration
      */
     private static Parent root;
+    /**
+     * Instance of global_variable class
+     */
+    public static global_variable AccountInfo;
+
+    /**
+     * Type of dashboard displayed depending on account type
+     */
+    public static int dashboardType;
 
     /**
      * Start up program
@@ -61,19 +71,19 @@ public class Main extends Application {
      * load a dashboard depending on what type of account is logged in
      * @param event on mouse click login button
      * @param type type of dashboard loaded
-     * @throws IOException errors
      */
-    public static void loadDashboard(MouseEvent event, String type) throws IOException{
+    public static void loadDashboard(MouseEvent event, int type) {
         try {
-            if (type.equals("admin"))
-                root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/DashboardAdmin.fxml")));
-            else if (type.equals("user"))
+            if (type == 0)
                 root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/DashboardUser.fxml")));
+            else if (type == 1)
+                root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/DashboardAdmin.fxml")));
 
             stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root, Color.TRANSPARENT);
             stage.setScene(scene);
-            Main.DashboardStage = stage;
+            DashboardStage = stage;
+            dashboardType = type;
             stage.show();
         } catch (Exception e){
             e.getCause();
@@ -83,14 +93,12 @@ public class Main extends Application {
     /**
      * Loads login form when logout button is clicked
      * @param event on mouse click
-     * @throws IOException errors
      */
-    public static void logOut(MouseEvent event) throws IOException{
+    public static void logOut(MouseEvent event) {
         try {
             root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/Login.fxml")));
-
             stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
+            scene = new Scene(root, Color.TRANSPARENT);
             stage.setScene(scene);
             Main.DashboardStage = stage;
             stage.show();

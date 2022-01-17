@@ -195,7 +195,7 @@
                               <Font size="15.0" />
                            </font>
                         </Label>
-                        <PasswordField id="UserTextField" fx:id="PasswordTextField" alignment="TOP_CENTER" onKeyPressed="#PasswordTextField_KeyPressed" promptText="Enter passcode" style="-fx-background-color: #2C2C3E; -fx-border-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-insets: 0; -fx-border-insets: 0;" stylesheets="@../css/Login.css" HBox.hgrow="NEVER">
+                        <PasswordField id="UserTextField" fx:id="PasscodeTextField" alignment="TOP_CENTER" onKeyPressed="#PasswordTextField_KeyPressed" promptText="Enter passcode" style="-fx-background-color: #2C2C3E; -fx-border-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-insets: 0; -fx-border-insets: 0;" stylesheets="@../css/Login.css" HBox.hgrow="NEVER">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
