@@ -5,7 +5,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -15,7 +14,6 @@ import resources.Main;
 import resources.database.DatabaseConnection;
 import resources.modules.global_variable;
 
-import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -56,12 +54,6 @@ public class Login implements Initializable {
      */
     @FXML
     private TextField UsernameTextField;
-
-    /**
-     * Just for debugging
-     */
-    @FXML
-    private TextArea consoleError;
 
     /**
      * Close the program on mouseClickEvent
@@ -116,17 +108,18 @@ public class Login implements Initializable {
     void Cancel() {
         UsernameTextField.clear();
         PasscodeTextField.clear();
-        consoleError.clear();
+        ConsoleLog.consoleLog.clear();
     }
 
     /**
      * Validate logIn credentials in database
      * @param event login button click
+     * @throws SQLException sql connection error
      */
     @FXML
-    void LoginRequest(MouseEvent event) throws SQLException, IOException {
+    void LoginRequest(MouseEvent event) throws SQLException {
         if (UsernameTextField.getLength() > 0 && PasscodeTextField.getLength() > 0) {
-            consoleError.setText(consoleError.getText() + "Validating Login Credential");
+            ConsoleLog.setConsoleLog("Validating Login Credential");
             ValidateLogin(event);
         } else if (UsernameTextField.getLength() == 0 && PasscodeTextField.getLength() > 0)
             LoginMessageLabel.setText("Please enter Username");
@@ -138,6 +131,7 @@ public class Login implements Initializable {
 
     /**
      * Calls login button on click when pressed enter
+     * @param event enter key press
      */
     @FXML
     void PasswordTextField_KeyPressed(KeyEvent event) {
@@ -147,28 +141,45 @@ public class Login implements Initializable {
     /**
      * Login credential validation method
      * @param event login on mouse click
+     * @throws SQLException error
      */
     private void ValidateLogin(MouseEvent event) throws SQLException {
-        consoleError.setText(consoleError.getText() + "\nValidate Login Method Called");
+        Main.sqlLoginConnection = false;
+        ConsoleLog.setConsoleLog("\nValidate Login Method Called");
 
         String username, passcode;
         username = UsernameTextField.getText();
         passcode = PasscodeTextField.getText();
-        consoleError.setText(consoleError.getText() + "\nLogin Credentials-> Username (" + username + "), Passcode(" + passcode + ")");
+        ConsoleLog.setConsoleLog("\nLogin Credentials-> Username (" + username + "), Passcode(" + passcode + ")");
 
+        if (!Main.sqlLoginConnection) {
+            if (username.equals("user") && (passcode.equals("user"))) {
+                Main.loadDashboard(event, 0);
+                Main.AccountInfo = new global_variable(username, passcode);
+                Main.AccountInfo.displayAllUserInformation();
+            } else if (username.equals("admin") && (passcode.equals("admin"))) {
+                Main.loadDashboard(event, 1);
+                Main.AccountInfo = new global_variable(username, passcode);
+                Main.AccountInfo.displayAllUserInformation();
+            } else {
+                LoginMessageLabel.setText("Login Failed");
+                ConsoleLog.setConsoleLog("Login Failed");
+            }
+        }
 
         Connection connection = DatabaseConnection.getInstance().getConnection();
         Statement statement = null;
         ResultSet resultSet = null;
         String sql_validate = "select accountType from employee where username = '" + username + "' and passcode = '" + passcode + "'";
 
-        consoleError.setText(consoleError.getText() + "\nConnection: " + connection.toString());
+        ConsoleLog.setConsoleLog("\nConnection: " + connection.toString());
 
         try {
+            Main.sqlLoginConnection = true;
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql_validate);
 
-            consoleError.setText(consoleError.getText() + "\nEntered Try");
+            ConsoleLog.setConsoleLog("\nEntered Try-Catch");
 
                 if (resultSet.next()){
                     int accountType = resultSet.getInt("accountType");
@@ -176,17 +187,18 @@ public class Login implements Initializable {
                     Main.AccountInfo = new global_variable(username, passcode);
                     Main.AccountInfo.displayAllUserInformation();
 
-                    consoleError.setText(consoleError.getText() + "\nDashboard Load");
+                    ConsoleLog.setConsoleLog("\nDashboard Load");
                 } else {
                     LoginMessageLabel.setText("Login failed!");
                 }
         } finally {
+            ConsoleLog.setConsoleLog("\nTry Finally");
             try {
                 connection.close();
                 statement.close();
                 resultSet.close();
             } catch (SQLException e){
-                consoleError.setText(consoleError.getText() + "\nSQL Exception: " + e.toString());
+                ConsoleLog.setConsoleLog("\nSQL Exception: " + e.toString());
                 System.out.println(e);
             }
         }

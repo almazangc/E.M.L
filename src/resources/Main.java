@@ -26,6 +26,12 @@ public class Main extends Application {
      * Stage declaration for passing non static stage
      */
     public static Stage MainStage;
+
+    /**
+     * ConsoleLogger Stage
+     */
+    public static Stage ConsoleLog;
+
     /**
      * Stage declaration for passing non static stage for dashboard
      */
@@ -54,6 +60,11 @@ public class Main extends Application {
     public static int dashboardType;
 
     /**
+     * Just for login form when exported jar
+     */
+    public static boolean sqlLoginConnection;
+
+    /**
      * Start up program
      * @param primaryStage stage to be loaded
      * @throws Exception in case of some error
@@ -65,6 +76,14 @@ public class Main extends Application {
         primaryStage.setScene(scene); // new Scene(root)
         primaryStage.initStyle(StageStyle.TRANSPARENT); //Borderless
         MainStage = primaryStage;
+
+        Parent consoleRoot = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/ConsoleLog.fxml")));
+        Scene consoleScene = new Scene(consoleRoot, Color.TRANSPARENT);
+        Stage consoleStage = new Stage();
+        consoleStage.setScene(consoleScene);
+        consoleStage.initStyle(StageStyle.TRANSPARENT);
+        ConsoleLog = consoleStage;
+        consoleStage.show();
         primaryStage.show();
     }
 
