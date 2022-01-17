@@ -1,6 +1,0 @@
-module:Employee.Management.System
-resources
-resources.controllers
-resources.controllers.dashboardTab
-resources.database
-resources.modules

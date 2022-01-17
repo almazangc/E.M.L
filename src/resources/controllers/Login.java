@@ -163,7 +163,7 @@ public class Login implements Initializable {
                 Main.AccountInfo.displayAllUserInformation();
             } else {
                 LoginMessageLabel.setText("Login Failed");
-                ConsoleLog.setConsoleLog("Login Failed");
+                ConsoleLog.setConsoleLog("\nLogin Failed");
             }
         }
 
@@ -173,7 +173,6 @@ public class Login implements Initializable {
         String sql_validate = "select accountType from employee where username = '" + username + "' and passcode = '" + passcode + "'";
 
         ConsoleLog.setConsoleLog("\nConnection: " + connection.toString());
-
         try {
             Main.sqlLoginConnection = true;
             statement = connection.createStatement();
@@ -190,6 +189,7 @@ public class Login implements Initializable {
                     ConsoleLog.setConsoleLog("\nDashboard Load");
                 } else {
                     LoginMessageLabel.setText("Login failed!");
+                    ConsoleLog.setConsoleLog("\nLogin Failed");
                 }
         } finally {
             ConsoleLog.setConsoleLog("\nTry Finally");
