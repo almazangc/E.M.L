@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -56,15 +57,15 @@
                <children>
                   <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                      <children>
-                        <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: trasnparent;" VBox.vgrow="ALWAYS">
+                        <ScrollPane fitToHeight="true" fitToWidth="true" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
                           <content>
-                              <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: transparent;">
+                              <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #1D1D1D;">
                                  <children>
                                     <VBox alignment="CENTER" fillWidth="false" spacing="10.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                        <children>
                                           <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" smooth="false" VBox.vgrow="ALWAYS">
                                              <image>
-                                                <Image url="@../../img/ProtoAvatar.png" />
+                                                <Image url="@../../img/man.png" />
                                              </image>
                                              <effect>
                                                 <DropShadow height="100.0" radius="49.5" width="100.0">
@@ -312,6 +313,15 @@
                                  </padding>
                               </HBox>
                           </content>
+                           <styleClass>
+                              <String fx:value="corner" />
+                              <String fx:value="decrement-button" />
+                              <String fx:value="increment-button" />
+                              <String fx:value="scroll-bar" />
+                              <String fx:value="track" />
+                              <String fx:value="scroll-pane" />
+                              <String fx:value="thumb" />
+                           </styleClass>
                         </ScrollPane>
                      </children>
                      <HBox.margin>

@@ -2,6 +2,8 @@ package resources.database;
 
 import resources.controllers.ConsoleLog;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -31,10 +33,10 @@ public class DatabaseConnection {
      * @return sql connection
      */
     public Connection getConnection() {
-        //String connect_string = "jdbc:sqlite:src/resources/database/system_database.db";
-        //String connect_string = "jdbc:sqlite:src\\resources\\database\\system_database.db";
-        String connect_string = "jdbc:sqlite:classpath:database\\system_database.db";
+        String connect_string = "jdbc:sqlite::resource:resources/database/system_database.db";
+
         Connection connection = null;
+
         try {
             connection = DriverManager.getConnection(connect_string);
         } catch (SQLException e) {

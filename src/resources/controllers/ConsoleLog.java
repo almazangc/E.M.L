@@ -66,6 +66,15 @@ public class ConsoleLog implements Initializable {
     }
 
     /**
+     * Clears console log
+     * @param event on mouse click
+     */
+    @FXML
+    void clearConsoleLog(MouseEvent event) {
+        this.consoleLog.clear();
+    }
+
+    /**
      * Responsible for Draggable Title Bar with mouse event
      */
     @Override
@@ -82,6 +91,10 @@ public class ConsoleLog implements Initializable {
         });
     }
 
+    /**
+     * Set console text
+     * @param Log message
+     */
     public static void setConsoleLog(String Log){
         consoleLog.setText(consoleLog.getText() + Log);
     }

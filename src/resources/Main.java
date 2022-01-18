@@ -60,11 +60,6 @@ public class Main extends Application {
     public static int dashboardType;
 
     /**
-     * Just for login form when exported jar
-     */
-    public static boolean sqlLoginConnection;
-
-    /**
      * Start up program
      * @param primaryStage stage to be loaded
      * @throws Exception in case of some error

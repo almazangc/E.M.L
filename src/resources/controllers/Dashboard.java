@@ -109,7 +109,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void MenuList_onAction() {
-        System.out.println("EVENT: NAV BAR");
+        ConsoleLog.setConsoleLog("\nClicked: Navigation Bar....");
     }
 
     /**
@@ -117,7 +117,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void profileOnClick() {
-        System.out.println("EVENT: Profile");
+        ConsoleLog.setConsoleLog("\nLoaded: Employee Profile....");
         Main.loadUI("EmployeeProfile" , dashboard_BorderPane);
     }
 
@@ -126,7 +126,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void employeeListOnClick() {
-        System.out.println("EVENT: Employee List");
+        ConsoleLog.setConsoleLog("\nLoaded: Employee List....");
         Main.loadUI("EmployeeList" , dashboard_BorderPane);
     }
 
@@ -135,7 +135,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void scheduleOnClick() {
-        System.out.println("EVENT: Schedule");
+        ConsoleLog.setConsoleLog("\nLoaded: Schedule....");
         Main.loadUI("Schedule" , dashboard_BorderPane);
     }
 
@@ -144,7 +144,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void comments_ratingOnCLick() {
-        System.out.println("EVENT: Comments and Rating");
+        ConsoleLog.setConsoleLog("\nLoaded: Employee Evaluation....");
         Main.loadUI("CommentsRating" , dashboard_BorderPane);
     }
 
@@ -153,7 +153,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void inventoryOnClick() {
-        System.out.println("EVENT: Inventory");
+        ConsoleLog.setConsoleLog("\nLoaded: Inventory....");
         Main.loadUI("Inventory" , dashboard_BorderPane);
     }
 
@@ -162,7 +162,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void foodMenuOnClick() {
-        System.out.println("EVENT: Food Menu");
+        ConsoleLog.setConsoleLog("\nLoaded: Food Menu List....");
         Main.loadUI("FoodMenuList" , dashboard_BorderPane);
     }
 
@@ -171,7 +171,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void manageDbOnClick() {
-        System.out.println("EVENT: DB management");
+        ConsoleLog.setConsoleLog("\nLoaded: Manage Employee Database....");
         Main.loadUI("ManageDatabase" , dashboard_BorderPane);
     }
 
@@ -180,7 +180,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void settingOnClick() {
-        System.out.println("EVENT: Settings");
+        ConsoleLog.setConsoleLog("\nLoaded: Settings....");
         Main.loadUI("Settings" , dashboard_BorderPane);
     }
 
@@ -190,8 +190,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void logoutOnClick(MouseEvent event) {
-        //No prompt message
-        System.out.println("Logged out");
+        ConsoleLog.setConsoleLog("\nDashboard: Log out....");
         Main.logOut(event);
     }
 
@@ -199,7 +198,6 @@ public class Dashboard implements Initializable {
      * Set Default Tab of Dashboard
      */
     public static void setDefault(){
-        String defaultTab = (Main.dashboardType == 0 ? "EmployeeProfile" : "EmployeeList");
-        Main.loadUI(defaultTab , borderPane);
+        Main.loadUI((Main.dashboardType == 0 ? "EmployeeProfile" : "EmployeeList") , borderPane);
     }
 }

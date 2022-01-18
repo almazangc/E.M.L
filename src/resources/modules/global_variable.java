@@ -1,5 +1,6 @@
 package resources.modules;
 
+import resources.controllers.ConsoleLog;
 import resources.database.DatabaseConnection;
 
 import java.sql.*;
@@ -97,6 +98,7 @@ public class global_variable {
                 System.out.println(e);
             }
         }
+        displayAllUserInformation();
     }
 
     /**
@@ -183,13 +185,16 @@ public class global_variable {
         return suggestion;
     }
 
+
     /**
      * Sout information gotta remove later
      */
     public void displayAllUserInformation(){
-        System.out.println("Complete Name: " + getCompleteName() +
-                            "\nRating: " + getRating() +
-                            "\nComment: " + getComments() +
-                            "\nSuggestion " + getSuggestion());
+        ConsoleLog.setConsoleLog("\nAccount Details" +
+                "\nComplete Name:\t" + getCompleteName() +
+                "\nID:\t" + getId() +
+                "\nAccount Type:\t" + getAccountType() +
+                "\nJob Position: " + getJobPosition() +
+                "\nRating: " + getRating());
     }
 }

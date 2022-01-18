@@ -144,28 +144,13 @@ public class Login implements Initializable {
      * @throws SQLException error
      */
     private void ValidateLogin(MouseEvent event) throws SQLException {
-        Main.sqlLoginConnection = false;
-        ConsoleLog.setConsoleLog("\nValidate Login Method Called");
+        ConsoleLog.setConsoleLog("\nLogging in....");
 
         String username, passcode;
         username = UsernameTextField.getText();
         passcode = PasscodeTextField.getText();
-        ConsoleLog.setConsoleLog("\nLogin Credentials-> Username (" + username + "), Passcode(" + passcode + ")");
 
-        if (!Main.sqlLoginConnection) {
-            if (username.equals("user") && (passcode.equals("user"))) {
-                Main.loadDashboard(event, 0);
-                Main.AccountInfo = new global_variable(username, passcode);
-                Main.AccountInfo.displayAllUserInformation();
-            } else if (username.equals("admin") && (passcode.equals("admin"))) {
-                Main.loadDashboard(event, 1);
-                Main.AccountInfo = new global_variable(username, passcode);
-                Main.AccountInfo.displayAllUserInformation();
-            } else {
-                LoginMessageLabel.setText("Login Failed");
-                ConsoleLog.setConsoleLog("\nLogin Failed");
-            }
-        }
+        ConsoleLog.setConsoleLog("\nLogin Credentials -> Username (" + username + "), Passcode(" + passcode + ")");
 
         Connection connection = DatabaseConnection.getInstance().getConnection();
         Statement statement = null;
@@ -174,25 +159,21 @@ public class Login implements Initializable {
 
         ConsoleLog.setConsoleLog("\nConnection: " + connection.toString());
         try {
-            Main.sqlLoginConnection = true;
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql_validate);
 
-            ConsoleLog.setConsoleLog("\nEntered Try-Catch");
+            ConsoleLog.setConsoleLog("\nChecking Database");
 
                 if (resultSet.next()){
                     int accountType = resultSet.getInt("accountType");
                     Main.loadDashboard(event, accountType);
                     Main.AccountInfo = new global_variable(username, passcode);
-                    Main.AccountInfo.displayAllUserInformation();
-
                     ConsoleLog.setConsoleLog("\nDashboard Load");
                 } else {
                     LoginMessageLabel.setText("Login failed!");
-                    ConsoleLog.setConsoleLog("\nLogin Failed");
+                    ConsoleLog.setConsoleLog("\n\nLogin Credentials not found in database");
                 }
         } finally {
-            ConsoleLog.setConsoleLog("\nTry Finally");
             try {
                 connection.close();
                 statement.close();

@@ -58,6 +58,11 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
                <children>
+                  <Button id="MinMaxButton" mnemonicParsing="false" onMouseClicked="#clearConsoleLog" style="-fx-background-color: #282839;" stylesheets="@../css/Login.css" text="Clear Log" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                   <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Minimize" style="-fx-background-color: #282839;" stylesheets="@../css/Login.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
@@ -99,7 +104,7 @@
    <center>
       <HBox alignment="CENTER" stylesheets="@../css/Login.css" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="consoleLogText" editable="false" prefHeight="200.0" prefWidth="450.0" promptText="Non SQL SB acount: user, user | admin, admin                                                         SQL DB account: sqluser, sqluser | sqladmin, sqladmin" wrapText="true" HBox.hgrow="ALWAYS" />
+            <TextArea fx:id="consoleLogText" editable="false" prefHeight="200.0" prefWidth="450.0" promptText="Non SQL SB acount: user, user | admin, admin                                                         SQL DB account: user, user | admin, admin" wrapText="true" HBox.hgrow="ALWAYS" />
          </children>
       </HBox>
    </center>
