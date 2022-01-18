@@ -1,5 +1,7 @@
 package resources.database;
 
+import resources.controllers.ConsoleLog;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -34,6 +36,7 @@ public class DatabaseConnection {
         try {
             connection = DriverManager.getConnection(connect_string);
         } catch (SQLException e) {
+            ConsoleLog.setConsoleLog(e.toString());
             e.printStackTrace();
         }
         return connection;

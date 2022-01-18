@@ -99,7 +99,7 @@
    <center>
       <HBox alignment="CENTER" stylesheets="@../css/Login.css" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="consoleLogText" editable="false" prefHeight="200.0" prefWidth="450.0" promptText="Non SQL SB acount: user, user | admin, admin                                                         SQL DB account: sqluser, sqluser | sqladmin, sqladmin" HBox.hgrow="ALWAYS" />
+            <TextArea fx:id="consoleLogText" editable="false" prefHeight="200.0" prefWidth="450.0" promptText="Non SQL SB acount: user, user | admin, admin                                                         SQL DB account: sqluser, sqluser | sqladmin, sqladmin" wrapText="true" HBox.hgrow="ALWAYS" />
          </children>
       </HBox>
    </center>
