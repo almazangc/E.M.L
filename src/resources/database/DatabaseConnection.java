@@ -31,7 +31,9 @@ public class DatabaseConnection {
      * @return sql connection
      */
     public Connection getConnection() {
-        String connect_string = "jdbc:sqlite:src/resources/database/system_database.db";
+        //String connect_string = "jdbc:sqlite:src/resources/database/system_database.db";
+        //String connect_string = "jdbc:sqlite:src\\resources\\database\\system_database.db";
+        String connect_string = "jdbc:sqlite:classpath:database\\system_database.db";
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(connect_string);
