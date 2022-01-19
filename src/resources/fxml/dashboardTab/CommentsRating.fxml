@@ -7,8 +7,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #1D1D1D;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.dashboardTab.CommentsRating">
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #25223A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.dashboardTab.CommentsRating">
    <children>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <top>
@@ -46,25 +47,46 @@
                      <children>
                         <VBox alignment="CENTER" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER" text="Current Evaluation" textFill="WHITE" />
+                              <Label alignment="CENTER" text="Current Evaluation" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                               <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #1A1A25; -fx-background-radius: 10;">
                                  <children>
                                     <HBox alignment="CENTER" spacing="5.0">
                                        <children>
-                                          <Label alignment="CENTER" text="Rating:" textFill="#f2ff00" />
-                                          <Label alignment="CENTER" layoutX="90.0" layoutY="52.0" text="5. 0" textFill="WHITE" />
+                                          <Label alignment="CENTER" text="Rating:" textFill="#f2ff00">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="90.0" layoutY="52.0" text="5. 0" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" spacing="5.0">
                                        <children>
-                                          <Label alignment="CENTER" text="Comments:" textFill="#ff7e7e" />
-                                          <Label alignment="CENTER" layoutX="80.0" layoutY="52.0" text="This the content of a comments" textFill="WHITE" />
+                                          <Label alignment="CENTER" text="Comments:" textFill="#ff7e7e">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="80.0" layoutY="52.0" text="This the content of a comments" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" spacing="5.0">
                                        <children>
-                                          <Label alignment="CENTER" text="Suggestion: " textFill="#ff7e7e" />
-                                          <Label alignment="CENTER" layoutX="77.0" layoutY="52.0" text="Sample content of a suggestion" textFill="WHITE" />
+                                          <Label alignment="CENTER" text="Suggestion: " textFill="#ff7e7e">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="77.0" layoutY="52.0" text="Sample content of a suggestion" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
                                        </children>
                                     </HBox>
                                  </children>
@@ -79,25 +101,46 @@
                         </VBox>
                         <VBox alignment="CENTER" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER" text="Past Evaluation" textFill="WHITE" />
+                              <Label alignment="CENTER" text="Past Evaluation" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                               <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #1A1A25; -fx-background-radius: 10;">
                                  <children>
                                     <HBox alignment="CENTER" spacing="5.0">
                                        <children>
-                                          <Label alignment="CENTER" text="Rating:" textFill="#f2ff00" />
-                                          <Label alignment="CENTER" layoutX="90.0" layoutY="52.0" text="5. 0" textFill="WHITE" />
+                                          <Label alignment="CENTER" text="Rating:" textFill="#f2ff00">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="90.0" layoutY="52.0" text="5. 0" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" spacing="5.0">
                                        <children>
-                                          <Label alignment="CENTER" text="Comments:" textFill="#ff7e7e" />
-                                          <Label alignment="CENTER" layoutX="80.0" layoutY="52.0" text="This the content of a comments" textFill="WHITE" />
+                                          <Label alignment="CENTER" text="Comments:" textFill="#ff7e7e">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="80.0" layoutY="52.0" text="This the content of a comments" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" spacing="5.0">
                                        <children>
-                                          <Label alignment="CENTER" text="Suggestion: " textFill="#ff7e7e" />
-                                          <Label alignment="CENTER" layoutX="77.0" layoutY="52.0" text="Sample content of a suggestion" textFill="WHITE" />
+                                          <Label alignment="CENTER" text="Suggestion: " textFill="#ff7e7e">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="77.0" layoutY="52.0" text="Sample content of a suggestion" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Label>
                                        </children>
                                     </HBox>
                                  </children>

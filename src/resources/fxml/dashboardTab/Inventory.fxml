@@ -20,7 +20,7 @@
                <children>
                   <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <HBox style="-fx-background-color: #0078B9;" VBox.vgrow="ALWAYS">
+                        <HBox style="-fx-background-color: #0078B9; -fx-background-radius: 0 0 20 0;" VBox.vgrow="ALWAYS">
                            <children>
                               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" HBox.hgrow="ALWAYS">
                                  <children>
@@ -34,21 +34,11 @@
                               <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0078B9;" />
                            </children>
                         </HBox>
-                        <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="5.0" style="-fx-background-color: White;" />
                      </children>
                   </VBox>
                </children>
             </HBox>
          </top>
-         <left>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="2.0" style="-fx-background-color: #0078B9;" BorderPane.alignment="CENTER" />
-         </left>
-         <bottom>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="2.0" style="-fx-background-color: #0078B9;" BorderPane.alignment="CENTER" />
-         </bottom>
-         <right>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="2.0" style="-fx-background-color: #0078B9;" BorderPane.alignment="CENTER" />
-         </right>
          <center>
             <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
                <padding>
@@ -72,7 +62,7 @@
                         </TableView>
                         <HBox alignment="CENTER_RIGHT" spacing="10.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0 10 5 15; -fx-border-color: #FFFFFF; -fx-border-radius: 0 10 5 15;" text="Add">
+                              <Button mnemonicParsing="false" stylesheets="@../../css/DashboardTab.css" text="Add">
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
@@ -84,7 +74,7 @@
                                     </DropShadow>
                                  </effect>
                               </Button>
-                              <Button layoutX="436.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0 10 5 15; -fx-border-color: #FFFFFF; -fx-border-radius: 0 10 5 15;" text="Remove">
+                              <Button layoutX="436.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@../../css/DashboardTab.css" text="Remove">
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
@@ -96,7 +86,7 @@
                                     </DropShadow>
                                  </effect>
                               </Button>
-                              <Button layoutX="467.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0 10 5 15; -fx-border-color: #FFFFFF; -fx-border-radius: 0 10 5 15;" text="Modify">
+                              <Button layoutX="467.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@../../css/DashboardTab.css" text="Modify">
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
@@ -108,7 +98,7 @@
                                     </DropShadow>
                                  </effect>
                               </Button>
-                              <Button layoutX="498.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0 10 5 15; -fx-border-color: #FFFFFF; -fx-border-radius: 0 10 5 15;" text="Save">
+                              <Button layoutX="498.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@../../css/DashboardTab.css" text="Save">
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
@@ -122,7 +112,7 @@
                               </Button>
                            </children>
                            <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              <Insets bottom="5.0" right="10.0" top="10.0" />
                            </padding>
                         </HBox>
                      </children>

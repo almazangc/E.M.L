@@ -1,17 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #27243D;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.dashboardTab.Settings">
    <children>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <center>
-            <Label text="Center" textFill="WHITE" BorderPane.alignment="CENTER" />
+            <HBox alignment="CENTER" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" fillWidth="false" spacing="20.0" style="-fx-background-color: White; -fx-background-radius: 0 0 20 20; -fx-border-color: transparent;" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../img/user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label style="-fx-text-fill: #000000;" text="Firstname MI. Lastname" textFill="#1a1a25">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" fillWidth="false" spacing="10.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Sex:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Male">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="248.0" spacing="10.0">
+                                 <children>
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Status: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Alive">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="278.0" spacing="10.0">
+                                 <children>
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Color: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Brown">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="308.0" spacing="10.0">
+                                 <children>
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Height: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Not found">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="338.0" spacing="10.0">
+                                 <children>
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Salary: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="None">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="368.0" spacing="10.0">
+                                 <children>
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Position: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Dev">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" fillWidth="false" layoutX="10.0" layoutY="273.0" spacing="10.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <HBox layoutX="140.0" layoutY="190.0" spacing="10.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" stylesheets="@../../css/DashboardTab.css" text="Change Password">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@../../css/DashboardTab.css" text="Save">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
          </center>
          <top>
             <HBox BorderPane.alignment="CENTER">
@@ -20,11 +167,11 @@
                      <children>
                         <HBox style="-fx-background-color: #0078B9;" VBox.vgrow="ALWAYS">
                            <children>
-                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" HBox.hgrow="ALWAYS">
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Label alignment="CENTER" text="SETTINGS | TAB" textFill="WHITE">
                                        <padding>
-                                          <Insets left="10.0" top="5.0" />
+                                          <Insets bottom="5.0" left="10.0" top="5.0" />
                                        </padding>
                                     </Label>
                                  </children>
@@ -32,21 +179,11 @@
                               <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0078B9;" />
                            </children>
                         </HBox>
-                        <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="5.0" style="-fx-background-color: White;" />
                      </children>
                   </VBox>
                </children>
             </HBox>
          </top>
-         <left>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="2.0" style="-fx-background-color: #0078B9;" BorderPane.alignment="CENTER" />
-         </left>
-         <bottom>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="2.0" style="-fx-background-color: #0078B9;" BorderPane.alignment="CENTER" />
-         </bottom>
-         <right>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="2.0" style="-fx-background-color: #0078B9;" BorderPane.alignment="CENTER" />
-         </right>
       </BorderPane>
    </children>
 </VBox>

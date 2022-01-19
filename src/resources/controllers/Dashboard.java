@@ -36,7 +36,7 @@ public class Dashboard implements Initializable {
     private static BorderPane borderPane;
 
     /**
-     * Application Title Bar
+     * Program Title Bar
      */
     @FXML
     private HBox TitleBar;

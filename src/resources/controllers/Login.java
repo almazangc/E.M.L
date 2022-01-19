@@ -38,7 +38,7 @@ public class Login implements Initializable {
     private Label LoginMessageLabel;
 
     /**
-     * Application Title Bar
+     * Program Title Bar
      */
     @FXML
     private HBox TitleBar;
