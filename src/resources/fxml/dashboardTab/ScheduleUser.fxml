@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #27243D;" stylesheets="@../../css/DashboardTab.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.dashboardTab.Schedule">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
+         <center>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                     <children>
+                        <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="68.0" resizable="false" text="TIME" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="MON" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="TUE" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="WED" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="THU" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="FRI" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="SAT" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="SUN" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox style="-fx-background-color: #0078B9; -fx-background-radius: 0 0 20 0;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label alignment="CENTER" text="SCHEDULE | TAB" textFill="WHITE">
+                                       <padding>
+                                          <Insets left="10.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0078B9;" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</VBox>

@@ -1,42 +1,19 @@
-#CloseButton{
+#CloseButton, #Min_MaxButton{
     -fx-background-color:  #282839;
     -fx-border-color:  #282839;
     -fx-background-radius: 10, 10, 10, 10;
     -fx-background-insets: 0, 1, 2;
 }
 
-#Min_MaxButton{
-    -fx-background-color:  #282839;
-    -fx-border-color:  #282839;
-    -fx-background-radius: 10, 10, 10, 10;
-    -fx-background-insets: 0, 1, 2;
-}
-
-#CloseButton: hover{
-    -fx-text-fill: #202225;
-    -fx-background-color: #ED4245;
-}
-
-#CloseButton: focused{
-    -fx-text-fill: #202225;
-    -fx-background-color: #ED4245;
-}
-
+#CloseButton: hover,
+#CloseButton: focused,
 #CloseButton: pressed{
     -fx-text-fill: #202225;
     -fx-background-color: #ED4245;
 }
 
-#Min_MaxButton: hover{
-    -fx-text-fill: #6C5CE7;
-    -fx-background-color: #282B2E;
-}
-
-#Min_MaxButton: focused{
-    -fx-text-fill: #6C5CE7;
-    -fx-background-color: #282B2E;
-}
-
+#Min_MaxButton: hover,
+#Min_MaxButton: focused,
 #Min_MaxButton: pressed{
     -fx-text-fill: #6C5CE7;
     -fx-background-color: #282B2E;
@@ -48,11 +25,13 @@
     -fx-background-insets: 0, 1, 2;
 }
 
-#LoginCancelButton: hover{
+#LoginCancelButton: hover,
+#LoginCancelButton: focused,
+#LoginCancelButton: pressed{
     -fx-text-fill: #000000;
     -fx-background-color: #065897;
 }
 
-#UserTextField{
-    -fx-text-fill: White;
+.text-field, .password-field{
+    -fx-text-fill: #FFFFFF;
 }

@@ -27,7 +27,7 @@
                                     <Image url="@../../img/user.png" />
                                  </image>
                               </ImageView>
-                              <Label style="-fx-text-fill: #000000;" text="Firstname MI. Lastname" textFill="#1a1a25">
+                              <Label fx:id="fullname" style="-fx-text-fill: #000000;" text="Firstname MI. Lastname" textFill="#1a1a25">
                                  <font>
                                     <Font name="System Bold" size="21.0" />
                                  </font>
@@ -37,36 +37,36 @@
                               <DropShadow />
                            </effect>
                            <padding>
-                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                              <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
                            </padding>
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                         </VBox>
-                        <VBox alignment="CENTER" fillWidth="false" spacing="10.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                        <VBox alignment="CENTER" fillWidth="false" spacing="10.0" style="-fx-background-color: transparent;">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Sex:">
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Sex:" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Male">
+                                    <Label fx:id="sex" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
                                  </children>
                               </HBox>
-                              <HBox layoutX="10.0" layoutY="248.0" spacing="10.0">
+                              <HBox layoutX="10.0" layoutY="218.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Status: ">
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Age: " textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Alive">
+                                    <Label fx:id="age" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -75,12 +75,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="278.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Color: ">
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Birthdate:" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Brown">
+                                    <Label fx:id="birthdate" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -89,12 +89,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="308.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Height: ">
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Barrangay: " textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Not found">
+                                    <Label fx:id="barangay" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -103,12 +103,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="338.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Salary: ">
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Municipality: " textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="None">
+                                    <Label fx:id="municipality" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -117,12 +117,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="368.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Position: ">
+                                    <Label stylesheets="@../../css/DashboardTab.css" text="Province: " textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" text="Dev">
+                                    <Label fx:id="province" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -131,7 +131,7 @@
                               </HBox>
                            </children>
                            <padding>
-                              <Insets top="10.0" />
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                            </padding>
                         </VBox>
                         <VBox alignment="CENTER_RIGHT" fillWidth="false" layoutX="10.0" layoutY="273.0" spacing="10.0" style="-fx-background-color: transparent;">
@@ -139,11 +139,6 @@
                               <HBox layoutX="140.0" layoutY="190.0" spacing="10.0">
                                  <children>
                                     <Button mnemonicParsing="false" stylesheets="@../../css/DashboardTab.css" text="Change Password">
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
-                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@../../css/DashboardTab.css" text="Save">
                                        <effect>
                                           <DropShadow />
                                        </effect>

@@ -131,7 +131,9 @@ public class Main extends Application {
     public static void loadUI(String fileName, BorderPane borderPane){
         Parent root = null;
         try {
-            root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/dashboardTab/" + fileName + ".fxml")));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("fxml/dashboardTab/" + fileName + ".fxml"));
+            //Here the value should be set from database before showing
+            root = loader.load();
         } catch (IOException e) {
             e.getCause();
         }

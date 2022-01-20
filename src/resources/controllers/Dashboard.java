@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -48,6 +49,12 @@ public class Dashboard implements Initializable {
     private Button MinMaxButton;
 
     /**
+     * Greet Logged Account by Firstname
+     */
+    @FXML
+    private Label greetFirstName;
+
+    /**
      * Close the program on mouseClickEvent
      * @param event close button click
      */
@@ -87,6 +94,7 @@ public class Dashboard implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         borderPane = dashboard_BorderPane; //initializing borderPane
+        greetFirstName.setText(Main.AccountInfo.getFirstName());
         TitleBar.setOnMousePressed(event -> {
             xOffset = event.getSceneX();
             yOffset = event.getSceneY();
@@ -116,7 +124,7 @@ public class Dashboard implements Initializable {
      * Loads profile fxml in user dashboard
      */
     @FXML
-    void profileOnClick() {
+    void employeeProfileOnClick() {
         ConsoleLog.setConsoleLog("\nLoaded: Employee Profile....");
         Main.loadUI("EmployeeProfile" , dashboard_BorderPane);
     }
@@ -131,12 +139,21 @@ public class Dashboard implements Initializable {
     }
 
     /**
-     * Loads schedule fxml on user and admin dashboard
+     * Loads schedule fxml on admin dashboard
      */
     @FXML
-    void scheduleOnClick() {
+    void scheduleOnClickAdmin() {
         ConsoleLog.setConsoleLog("\nLoaded: Schedule....");
-        Main.loadUI("Schedule" , dashboard_BorderPane);
+        Main.loadUI("ScheduleAdmin" , dashboard_BorderPane);
+    }
+
+    /**
+     * Loads schedule fxml on user dashboard
+     */
+    @FXML
+    void scheduleOnClickUser() {
+        ConsoleLog.setConsoleLog("\nLoaded: Schedule....");
+        Main.loadUI("ScheduleUser" , dashboard_BorderPane);
     }
 
     /**
@@ -198,6 +215,8 @@ public class Dashboard implements Initializable {
      * Set Default Tab of Dashboard
      */
     public static void setDefault(){
-        Main.loadUI((Main.dashboardType == 0 ? "EmployeeProfile" : "EmployeeList") , borderPane);
+//        Intializable is not working as expected
+          ConsoleLog.setConsoleLog("\nDefault Dashboard Tab: Need fix....");
+//        Main.loadUI((Main.dashboardType == 0 ? "EmployeeProfile" : "EmployeeList") , borderPane);
     }
 }

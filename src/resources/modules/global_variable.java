@@ -26,6 +26,18 @@ public class global_variable {
      */
     private String lastName;
     /**
+     * Logged Account Sex
+     */
+    private String sex;
+    /**
+     * Logged Account Birthdate
+     */
+    private String birthdate;
+    /**
+     * Logged Account Age
+     */
+    private int age;
+    /**
      * Logged Account Profile Picture
      */
     private Blob profileImage;
@@ -53,7 +65,38 @@ public class global_variable {
      * Logged Account Suggestion
      */
     private String suggestion;
+    /**
+     * Logged Account barangay Address
+     */
+    private String barangay;
+    /**
+     * Logged Account municipality
+     */
+    private String municipality;
+    /**
+     * Logged Account province
+     */
+    private String province;
+    /**
+     * Logged Account postal code
+     */
+    private int postalCode;
+    /**
+     * Total Accounts
+     */
+    private int idCount;
+    /**
+     * @return Total Employee Row Count
+     */
+    public int getIdCount() {
+        return idCount;
+    }
 
+    /**
+     * Default Constructor
+     */
+    public global_variable() {
+    }
     /**
      * Constructor for initializing values of declared variables
      * @param username validated account
@@ -79,10 +122,14 @@ public class global_variable {
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql_validate);
             while (resultSet.next()){
+                idCount++;
                 this.id = resultSet.getInt("id");
                 this.firstName = resultSet.getString("firstName");
                 this.middleInitial = resultSet.getString("middleInitial");
                 this.lastName = resultSet.getString("lastName");
+                this.sex = resultSet.getString("sex");
+                this.birthdate = resultSet.getString("birthdate");
+                this.age = resultSet.getInt("age");
                 this.accountType = resultSet.getInt("accountType");
                 //this.profileImage = resultSet.getBlob("profile"); // Need to learn about blobs
                 this.jobPosition = resultSet.getString("position");
@@ -90,6 +137,10 @@ public class global_variable {
                 this.rating = resultSet.getInt("rating");
                 this.comments = resultSet.getString("comment");
                 this.suggestion = resultSet.getString("suggestion");
+                this.barangay = resultSet.getString("addr_brgy");
+                this.municipality = resultSet.getString("addr_municipality");
+                this.province = resultSet.getString("addr_province");
+                this.postalCode = resultSet.getInt("addr_postalcode");
             }
         } finally {
             try {
@@ -98,7 +149,30 @@ public class global_variable {
                 System.out.println(e);
             }
         }
+        this.idCount = GetTotalID(0);
         displayAllUserInformation();
+    }
+
+    public int GetTotalID(int totalID) throws SQLException {
+        Connection connection = DatabaseConnection.getInstance().getConnection();
+        Statement statement = null;
+        ResultSet resultSet = null;
+        String sql_validate = "select count(*) as totalID from employee";
+
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql_validate);
+            while (resultSet.next()){
+                totalID = resultSet.getInt("totalID");
+            }
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e){
+                System.out.println(e);
+            }
+        }
+        return totalID;
     }
 
     /**
@@ -127,6 +201,27 @@ public class global_variable {
      */
     public String getLastName() {
         return lastName;
+    }
+
+    /**
+     * @return Sex
+     */
+    public String getSex() {
+        return sex;
+    }
+
+    /**
+     * @return birthdate mm/dd/yy
+     */
+    public String getBirthdate() {
+        return birthdate;
+    }
+
+    /**
+     * @return Age
+     */
+    public int getAge() {
+        return age;
     }
 
     /**
@@ -185,7 +280,33 @@ public class global_variable {
         return suggestion;
     }
 
+    /**
+     * @return Barangay Address
+     */
+    public String getBarangay() {
+        return barangay;
+    }
 
+    /**
+     * @return Municipality
+     */
+    public String getMunicipality() {
+        return municipality;
+    }
+
+    /**
+     * @return Province
+     */
+    public String getProvince() {
+        return province;
+    }
+
+    /**
+     * @return Postal code
+     */
+    public int getPostalCode() {
+        return postalCode;
+    }
     /**
      * Sout information gotta remove later
      */
