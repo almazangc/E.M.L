@@ -22,4 +22,5 @@ module Employee.Management.System {
     opens resources.modules;
     opens resources.database;
     opens resources.css;
+    opens resources.database.table;
 }
