@@ -295,7 +295,7 @@
                   <Font name="System Bold" size="45.0" />
                </font>
             </Label>
-            <Label fx:id="greetFirstName">
+            <Label text="Admin">
                <textFill>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>

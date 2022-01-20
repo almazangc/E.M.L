@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 /**
- * Employee restaurant manager
+ * EmployeeModel restaurant manager
  * @author Gilbert Almazan
  *
  */

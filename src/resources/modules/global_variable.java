@@ -86,7 +86,7 @@ public class global_variable {
      */
     private int idCount;
     /**
-     * @return Total Employee Row Count
+     * @return Total EmployeeModel Row Count
      */
     public int getIdCount() {
         return idCount;

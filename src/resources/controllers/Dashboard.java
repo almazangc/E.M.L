@@ -49,12 +49,6 @@ public class Dashboard implements Initializable {
     private Button MinMaxButton;
 
     /**
-     * Greet Logged Account by Firstname
-     */
-    @FXML
-    private Label greetFirstName;
-
-    /**
      * Close the program on mouseClickEvent
      * @param event close button click
      */
@@ -94,7 +88,6 @@ public class Dashboard implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         borderPane = dashboard_BorderPane; //initializing borderPane
-        greetFirstName.setText(Main.AccountInfo.getFirstName());
         TitleBar.setOnMousePressed(event -> {
             xOffset = event.getSceneX();
             yOffset = event.getSceneY();
@@ -125,7 +118,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void employeeProfileOnClick() {
-        ConsoleLog.setConsoleLog("\nLoaded: Employee Profile....");
+        ConsoleLog.setConsoleLog("\nLoaded: EmployeeModel Profile....");
         Main.loadUI("EmployeeProfile" , dashboard_BorderPane);
     }
 
@@ -134,7 +127,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void employeeListOnClick() {
-        ConsoleLog.setConsoleLog("\nLoaded: Employee List....");
+        ConsoleLog.setConsoleLog("\nLoaded: EmployeeModel List....");
         Main.loadUI("EmployeeList" , dashboard_BorderPane);
     }
 
@@ -143,7 +136,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void scheduleOnClickAdmin() {
-        ConsoleLog.setConsoleLog("\nLoaded: Schedule....");
+        ConsoleLog.setConsoleLog("\nLoaded: ScheduleModel....");
         Main.loadUI("ScheduleAdmin" , dashboard_BorderPane);
     }
 
@@ -152,7 +145,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void scheduleOnClickUser() {
-        ConsoleLog.setConsoleLog("\nLoaded: Schedule....");
+        ConsoleLog.setConsoleLog("\nLoaded: ScheduleModel....");
         Main.loadUI("ScheduleUser" , dashboard_BorderPane);
     }
 
@@ -161,7 +154,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void comments_ratingOnCLick() {
-        ConsoleLog.setConsoleLog("\nLoaded: Employee Evaluation....");
+        ConsoleLog.setConsoleLog("\nLoaded: EmployeeModel Evaluation....");
         Main.loadUI("CommentsRating" , dashboard_BorderPane);
     }
 
@@ -188,7 +181,7 @@ public class Dashboard implements Initializable {
      */
     @FXML
     void manageDbOnClick() {
-        ConsoleLog.setConsoleLog("\nLoaded: Manage Employee Database....");
+        ConsoleLog.setConsoleLog("\nLoaded: Manage EmployeeModel Database....");
         Main.loadUI("ManageDatabase" , dashboard_BorderPane);
     }
 

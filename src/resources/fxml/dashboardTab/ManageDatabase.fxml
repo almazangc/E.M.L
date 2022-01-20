@@ -47,16 +47,15 @@
                <children>
                   <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
+                        <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
                            <columns>
-                              <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="68.0" resizable="false" text="ID" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="NAME" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="POSITION" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="CONTACT TYPE" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="MIN WAGE" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="COMMENT" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="RATING" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="SUGGESTION" />
+                              <TableColumn fx:id="id" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="68.0" text="ID" />
+                              <TableColumn fx:id="name" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="NAME" />
+                              <TableColumn fx:id="position" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="POSITION" />
+                              <TableColumn fx:id="min_wage" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="MIN WAGE" />
+                              <TableColumn fx:id="comment" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="COMMENT" />
+                              <TableColumn fx:id="rating" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="RATING" />
+                              <TableColumn fx:id="suggestion" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="SUGGESTION" />
                            </columns>
                         </TableView>
                         <HBox alignment="CENTER_RIGHT" spacing="10.0">

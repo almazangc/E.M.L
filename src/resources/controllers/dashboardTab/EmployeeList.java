@@ -98,11 +98,11 @@ public class EmployeeList implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ConsoleLog.setConsoleLog("\nEmployee ProfileList: Initialize Method");
+        ConsoleLog.setConsoleLog("\nEmployeeModel ProfileList: Initialize Method");
 
         updateList();
 
-        ConsoleLog.setConsoleLog("\nEmployee ProfileList: Initialized Complete");
+        ConsoleLog.setConsoleLog("\nEmployeeModel ProfileList: Initialized Complete");
     }
 
     /**

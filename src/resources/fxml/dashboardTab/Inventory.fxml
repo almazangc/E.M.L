@@ -49,11 +49,11 @@
                      <children>
                         <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
                            <columns>
-                              <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="68.0" resizable="false" text="TYPE" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="PRODUCT NAME" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="AMOUNT" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="COST" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="DESCRIPTION" />
+                              <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="68.0" text="TYPE" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" text="PRODUCT NAME" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" text="AMOUNT" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" text="COST" />
+                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" text="DESCRIPTION" />
                            </columns>
                         </TableView>
                         <HBox alignment="CENTER_RIGHT" spacing="10.0">

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -16,7 +14,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #27243D;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.dashboardTab.EmployeeList">
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: linear-gradient(from 100.0% 0.0% to 0.0% 100.0%, #423e68ff 0.0%, #25223aff 36.815%, #22202cff 100.0%);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.dashboardTab.EmployeeList">
    <children>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <top>
@@ -24,7 +22,7 @@
                <children>
                   <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <HBox style="-fx-background-color: #0078B9;" VBox.vgrow="ALWAYS">
+                        <HBox style="-fx-background-color: #0078B9; -fx-background-radius: 0 0 25 0;" VBox.vgrow="ALWAYS">
                            <children>
                               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" HBox.hgrow="ALWAYS">
                                  <children>
@@ -84,207 +82,194 @@
                                     <Insets />
                                  </HBox.margin>
                               </VBox>
-                              <ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" stylesheets="@../../css/DashboardTab.css" HBox.hgrow="ALWAYS">
-                                 <content>
-                                    <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #25223A;">
+                              <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: linear-gradient(from 100.0% 0.0% to 0.0% 100.0%, #423e68ff 0.0%, #25223aff 36.815%, #22202cff 100.0%);">
+                                 <children>
+                                    <VBox alignment="BOTTOM_CENTER" fillWidth="false" spacing="10.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                        <children>
-                                          <VBox alignment="BOTTOM_CENTER" fillWidth="false" spacing="10.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                          <VBox alignment="CENTER" fillWidth="false" spacing="10.0" style="-fx-background-color: transparent;">
                                              <children>
-                                                <VBox alignment="CENTER" fillWidth="false" spacing="10.0" style="-fx-background-color: transparent;">
+                                                <HBox spacing="10.0">
                                                    <children>
-                                                      <HBox spacing="10.0">
-                                                         <children>
-                                                            <Label text="Sex:">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="sex" layoutX="10.0" layoutY="10.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox layoutX="10.0" layoutY="278.0" spacing="10.0">
-                                                         <children>
-                                                            <Label text="Birthdate:">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="birthdate" layoutX="10.0" layoutY="10.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox layoutX="10.0" layoutY="248.0" spacing="10.0">
-                                                         <children>
-                                                            <Label text="Position:">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="position" layoutX="10.0" layoutY="10.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox layoutX="10.0" layoutY="308.0" spacing="10.0">
-                                                         <children>
-                                                            <Label text="Barrangay: ">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="barangay" layoutX="10.0" layoutY="10.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox layoutX="10.0" layoutY="338.0" spacing="10.0">
-                                                         <children>
-                                                            <Label text="Municipality: ">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="municipality" layoutX="10.0" layoutY="10.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox layoutX="10.0" layoutY="368.0" spacing="10.0">
-                                                         <children>
-                                                            <Label text="Province: ">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="province" layoutX="10.0" layoutY="10.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox layoutX="10.0" layoutY="428.0" spacing="10.0">
-                                                         <children>
-                                                            <Label text="Rating:">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="rating" layoutX="10.0" layoutY="10.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="458.0" spacing="10.0">
-                                                         <children>
-                                                            <Label text="Comment:">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="comment" alignment="CENTER" prefWidth="350.0" textFill="WHITE" wrapText="true">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="488.0" spacing="10.0">
-                                                         <children>
-                                                            <Label text="Suggestion:">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="suggestion" layoutX="10.0" layoutY="10.0" prefWidth="350.0" wrapText="true">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
+                                                      <Label text="Sex:" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="sex" layoutX="10.0" layoutY="10.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
                                                    </children>
-                                                   <padding>
-                                                      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-                                                   </padding>
-                                                </VBox>
-                                                <HBox alignment="CENTER" spacing="10.0">
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="278.0" spacing="10.0">
                                                    <children>
-                                                      <Button mnemonicParsing="false" onMouseClicked="#backOnClick" stylesheets="@../../css/DashboardTab.css" text="&lt;">
-                                                         <padding>
-                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                         </padding>
-                                                         <effect>
-                                                            <DropShadow>
-                                                               <color>
-                                                                  <Color red="0.01663011685013771" green="0.007675438653677702" blue="0.2763157784938812" />
-                                                               </color>
-                                                            </DropShadow>
-                                                         </effect>
-                                                      </Button>
-                                                      <TextField fx:id="id" editable="false" prefWidth="30.0" text="1" />
-                                                      <Button layoutX="436.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#nextOnClick" stylesheets="@../../css/DashboardTab.css" text="&gt;">
-                                                         <padding>
-                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                         </padding>
-                                                         <effect>
-                                                            <DropShadow>
-                                                               <color>
-                                                                  <Color red="0.01663011685013771" green="0.007675438653677702" blue="0.2763157784938812" />
-                                                               </color>
-                                                            </DropShadow>
-                                                         </effect>
-                                                      </Button>
-                                                      <Button fx:id="edit" layoutX="467.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#editOnClick" stylesheets="@../../css/DashboardTab.css" text="Modify">
-                                                         <padding>
-                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                         </padding>
-                                                         <effect>
-                                                            <DropShadow>
-                                                               <color>
-                                                                  <Color red="0.01663011685013771" green="0.007675438653677702" blue="0.2763157784938812" />
-                                                               </color>
-                                                            </DropShadow>
-                                                         </effect>
-                                                      </Button>
+                                                      <Label text="Birthdate:" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="birthdate" layoutX="10.0" layoutY="10.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
                                                    </children>
-                                                   <padding>
-                                                      <Insets bottom="5.0" right="10.0" top="10.0" />
-                                                   </padding>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="248.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Position:" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="position" layoutX="10.0" layoutY="10.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="308.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Barrangay: " textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="barangay" layoutX="10.0" layoutY="10.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="338.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Municipality: " textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="municipality" layoutX="10.0" layoutY="10.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="368.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Province: " textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="province" layoutX="10.0" layoutY="10.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="428.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Rating:" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="rating" layoutX="10.0" layoutY="10.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="458.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Comment:" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="comment" alignment="CENTER" prefWidth="350.0" textFill="WHITE" wrapText="true">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="488.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Suggestion:" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="suggestion" layoutX="10.0" layoutY="10.0" prefWidth="350.0" textFill="WHITE" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
                                                 </HBox>
                                              </children>
                                              <padding>
-                                                <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+                                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                                              </padding>
                                           </VBox>
+                                          <HBox alignment="CENTER" spacing="10.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onMouseClicked="#backOnClick" stylesheets="@../../css/DashboardTab.css" text="&lt;">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                   <effect>
+                                                      <DropShadow>
+                                                         <color>
+                                                            <Color red="0.01663011685013771" green="0.007675438653677702" blue="0.2763157784938812" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </Button>
+                                                <TextField fx:id="id" editable="false" prefWidth="30.0" text="1" />
+                                                <Button layoutX="436.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#nextOnClick" stylesheets="@../../css/DashboardTab.css" text="&gt;">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                   <effect>
+                                                      <DropShadow>
+                                                         <color>
+                                                            <Color red="0.01663011685013771" green="0.007675438653677702" blue="0.2763157784938812" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </Button>
+                                                <Button fx:id="edit" layoutX="467.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#editOnClick" stylesheets="@../../css/DashboardTab.css" text="Modify">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                   <effect>
+                                                      <DropShadow>
+                                                         <color>
+                                                            <Color red="0.01663011685013771" green="0.007675438653677702" blue="0.2763157784938812" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
                                        </children>
-                                    </HBox>
-                                 </content>
-                                 <styleClass>
-                                    <String fx:value="corner" />
-                                    <String fx:value="decrement-button" />
-                                    <String fx:value="increment-button" />
-                                    <String fx:value="scroll-bar" />
-                                    <String fx:value="track" />
-                                    <String fx:value="scroll-pane" />
-                                    <String fx:value="thumb" />
-                                 </styleClass>
-                              </ScrollPane>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </HBox>
                            </children>
                         </HBox>
                      </children>

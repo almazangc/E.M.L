@@ -1,7 +1,6 @@
 package resources.controllers;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -24,7 +23,7 @@ import java.util.ResourceBundle;
 /**
  * Handles Login actions and events
  */
-public class Login implements Initializable {
+public class Login implements javafx.fxml.Initializable {
 
     /**
      * Use to get and set mouse location on screen for dragging application

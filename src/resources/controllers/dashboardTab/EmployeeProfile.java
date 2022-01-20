@@ -87,7 +87,7 @@ public class EmployeeProfile implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ConsoleLog.setConsoleLog("\nEmployee Profile: Initialize Method");
+        ConsoleLog.setConsoleLog("\nEmployeeModel Profile: Initialize Method");
 
         accountDetails = Main.AccountInfo;
 
@@ -106,7 +106,7 @@ public class EmployeeProfile implements Initializable {
         this.province.setText(accountDetails.getProvince());
         this.postalCode.setText(Integer.toString(accountDetails.getPostalCode()));
 
-        ConsoleLog.setConsoleLog("\nEmployee Profile: Initialized Complete");
+        ConsoleLog.setConsoleLog("\nEmployeeModel Profile: Initialized Complete");
     }
 }
 

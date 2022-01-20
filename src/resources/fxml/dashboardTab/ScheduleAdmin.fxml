@@ -23,16 +23,16 @@
                <children>
                   <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
+                        <TableView fx:id="table" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
                            <columns>
-                              <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="68.0" resizable="false" text="TIME" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="MON" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="TUE" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="WED" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="THU" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="FRI" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="SAT" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" resizable="false" text="SUN" />
+                              <TableColumn fx:id="time" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="false" text="TIME" />
+                              <TableColumn fx:id="mon" editable="false" minWidth="-1.0" prefWidth="120.0" sortable="false" text="MON" />
+                              <TableColumn fx:id="tue" editable="false" minWidth="-1.0" prefWidth="120.0" sortable="false" text="TUE" />
+                              <TableColumn fx:id="wed" editable="false" minWidth="-1.0" prefWidth="120.0" sortable="false" text="WED" />
+                              <TableColumn fx:id="thu" editable="false" minWidth="-1.0" prefWidth="120.0" sortable="false" text="THU" />
+                              <TableColumn fx:id="fri" editable="false" minWidth="-1.0" prefWidth="120.0" sortable="false" text="FRI" />
+                              <TableColumn fx:id="sat" editable="false" minWidth="-1.0" prefWidth="120.0" sortable="false" text="SAT" />
+                              <TableColumn fx:id="sun" editable="false" minWidth="-1.0" prefWidth="-1.0" sortable="false" text="SUN" />
                            </columns>
                         </TableView>
                         <HBox alignment="CENTER_RIGHT" spacing="10.0">
