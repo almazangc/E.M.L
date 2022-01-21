@@ -1,12 +1,23 @@
 package resources.database.table;
 
 public class FoodMenuModel {
-    private String type;
-    private String name;
-    private String recipes;
+    /**
+     * Food Type/ Category, Name, Recipes, Description
+     */
+    private String type, name, recipes, description;
+    /**
+     * Food Cost
+     */
     private double cost;
-    private String description;
 
+    /**
+     * FoodMenuModel Constructor
+     * @param type type | category
+     * @param name name
+     * @param recipes recipes
+     * @param cost cost
+     * @param description description
+     */
     public FoodMenuModel(String type, String name, String recipes, double cost, String description) {
         this.type = type;
         this.name = name;

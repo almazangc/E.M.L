@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -20,7 +20,7 @@
                <children>
                   <VBox alignment="CENTER" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                      <children>
-                        <VBox alignment="CENTER" fillWidth="false" spacing="20.0" style="-fx-background-color: White; -fx-background-radius: 0 0 20 20; -fx-border-color: transparent;" stylesheets="@../../css/DashboardTab.css" VBox.vgrow="ALWAYS">
+                        <VBox alignment="CENTER" fillWidth="false" spacing="20.0" style="-fx-background-color: White; -fx-background-radius: 0 0 20 20; -fx-border-color: transparent;" stylesheets="@../../css/ScrollPane_TableView.css" VBox.vgrow="ALWAYS">
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                                  <image>
@@ -47,12 +47,12 @@
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Sex:" textFill="WHITE">
+                                    <Label stylesheets="@../../css/ScrollPane_TableView.css" text="Sex:" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="sex" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
+                                    <Label fx:id="sex" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/ScrollPane_TableView.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -61,12 +61,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="218.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Age: " textFill="WHITE">
+                                    <Label stylesheets="@../../css/ScrollPane_TableView.css" text="Age: " textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="age" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
+                                    <Label fx:id="age" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/ScrollPane_TableView.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -75,12 +75,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="278.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Birthdate:" textFill="WHITE">
+                                    <Label stylesheets="@../../css/ScrollPane_TableView.css" text="Birthdate:" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="birthdate" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
+                                    <Label fx:id="birthdate" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/ScrollPane_TableView.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -89,12 +89,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="308.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Barrangay: " textFill="WHITE">
+                                    <Label stylesheets="@../../css/ScrollPane_TableView.css" text="Barrangay: " textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="barangay" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
+                                    <Label fx:id="barangay" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/ScrollPane_TableView.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -103,12 +103,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="338.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Municipality: " textFill="WHITE">
+                                    <Label stylesheets="@../../css/ScrollPane_TableView.css" text="Municipality: " textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="municipality" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
+                                    <Label fx:id="municipality" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/ScrollPane_TableView.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -117,12 +117,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="368.0" spacing="10.0">
                                  <children>
-                                    <Label stylesheets="@../../css/DashboardTab.css" text="Province: " textFill="WHITE">
+                                    <Label stylesheets="@../../css/ScrollPane_TableView.css" text="Province: " textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="province" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/DashboardTab.css" textFill="WHITE">
+                                    <Label fx:id="province" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/ScrollPane_TableView.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -136,14 +136,13 @@
                         </VBox>
                         <VBox alignment="CENTER_RIGHT" fillWidth="false" layoutX="10.0" layoutY="273.0" spacing="10.0" style="-fx-background-color: transparent;">
                            <children>
-                              <HBox layoutX="140.0" layoutY="190.0" spacing="10.0">
+                              <HBox alignment="CENTER_RIGHT" spacing="10.0">
                                  <children>
-                                    <Button mnemonicParsing="false" stylesheets="@../../css/DashboardTab.css" text="Change Password">
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
+                                    <JFXButton id="Button" buttonType="RAISED" stylesheets="@../../css/Buttons.css" text="CHANGE PASSCODE" />
                                  </children>
+                                 <padding>
+                                    <Insets bottom="5.0" right="10.0" top="10.0" />
+                                 </padding>
                               </HBox>
                            </children>
                            <padding>

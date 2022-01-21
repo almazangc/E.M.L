@@ -16,11 +16,11 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="400.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245; -fx-background-radius: 10 10 0 0; -fx-border-radius: 10 10 0 0;" stylesheets="@../css/Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.ConsoleLog">
+<BorderPane prefHeight="400.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245; -fx-background-radius: 10 10 0 0; -fx-border-radius: 10 10 0 0;" stylesheets="@../css/Buttons.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.ConsoleLog">
    <top>
-      <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10 10 0 0;" stylesheets="@../css/Login.css">
+      <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10 10 0 0;" stylesheets="@../css/Buttons.css">
          <children>
-            <HBox alignment="CENTER_LEFT" stylesheets="@../css/Login.css">
+            <HBox alignment="CENTER_LEFT" stylesheets="@../css/Buttons.css">
                <children>
                   <Label text="Console Log">
                      <padding>
@@ -52,18 +52,18 @@
                   </Label>
                </children>
             </HBox>
-            <Pane stylesheets="@../css/Login.css" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" stylesheets="@../css/Login.css">
+            <Pane stylesheets="@../css/Buttons.css" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" stylesheets="@../css/Buttons.css">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
                <children>
-                  <Button id="MinMaxButton" mnemonicParsing="false" onMouseClicked="#clearConsoleLog" style="-fx-background-color: #282839;" stylesheets="@../css/Login.css" text="Clear Log" textFill="WHITE">
+                  <Button id="MinMaxButton" mnemonicParsing="false" onMouseClicked="#clearConsoleLog" style="-fx-background-color: #282839;" stylesheets="@../css/Buttons.css" text="Clear Log" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Minimize" style="-fx-background-color: #282839;" stylesheets="@../css/Login.css" text="" textAlignment="CENTER" textFill="WHITE">
+                  <Button id="Min_MaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Minimize" style="-fx-background-color: #282839;" stylesheets="@../css/Buttons.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
@@ -71,7 +71,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="Min_MaxButton" fx:id="MinMaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/Login.css" text="" textAlignment="CENTER" textFill="WHITE">
+                  <Button id="Min_MaxButton" fx:id="MinMaxButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#Maximize" style="-fx-background-color: #282839;" stylesheets="@../css/Buttons.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
@@ -79,7 +79,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="CloseButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onMouseClicked="#Close" stylesheets="@../css/Login.css" text="" textAlignment="CENTER" textFill="WHITE">
+                  <Button id="CloseButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onMouseClicked="#Close" stylesheets="@../css/Buttons.css" text="" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Marlett" size="12.0" />
                      </font>
@@ -99,10 +99,10 @@
       </HBox>
    </top>
    <bottom>
-      <Pane prefHeight="5.0" style="-fx-background-color: #ED4245;" stylesheets="@../css/Login.css" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="5.0" style="-fx-background-color: #ED4245;" stylesheets="@../css/Buttons.css" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <HBox alignment="CENTER" stylesheets="@../css/Login.css" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" stylesheets="@../css/Buttons.css" BorderPane.alignment="CENTER">
          <children>
             <TextArea fx:id="consoleLogText" editable="false" prefHeight="200.0" prefWidth="450.0" promptText="SQL DB acounts;                                                                                                        User: user, user                                                                                                          Admin: admin, admin" wrapText="true" HBox.hgrow="ALWAYS" />
          </children>

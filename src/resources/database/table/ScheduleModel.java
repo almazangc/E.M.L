@@ -1,7 +1,13 @@
 package resources.database.table;
 
 public class ScheduleModel {
+    /**
+     * Time
+     */
     private String TIME;
+    /**
+     * Weekly Days
+     */
     private String MON, TUE, WED, THU, FRI, SAT, SUN;
 
     public ScheduleModel(String TIME, String MON, String TUE, String WED, String THU, String FRI, String SAT, String SUN) {

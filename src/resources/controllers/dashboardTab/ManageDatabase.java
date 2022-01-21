@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import resources.database.DatabaseConnection;
 import resources.database.table.EmployeeModel;
 
@@ -24,33 +23,27 @@ import java.util.ResourceBundle;
  * Rate and Write comments and suggestion
  */
 public class ManageDatabase implements Initializable {
-
+    /**
+     * Table
+     */
     @FXML
     private TableView<EmployeeModel> table;
-
+    /**
+     * ID, Name, Job Position, Min_Wage, Rating, Comment, Suggestion
+     */
     @FXML
-    private TableColumn<EmployeeModel, String> id;
+    private TableColumn<EmployeeModel, String> id, name, position, min_wage, rating, comment, suggestion;
 
-    @FXML
-    private TableColumn<EmployeeModel, String> name;
-
-    @FXML
-    private TableColumn<EmployeeModel, String> position;
-
-    @FXML
-    private TableColumn<EmployeeModel, String> min_wage;
-
-    @FXML
-    private TableColumn<EmployeeModel, String> rating;
-
-    @FXML
-    private TableColumn<EmployeeModel, String> comment;
-
-    @FXML
-    private TableColumn<EmployeeModel, String> suggestion;
-
+    /**
+     * observableList arraylist
+     */
     private ObservableList<EmployeeModel> observableList = FXCollections.observableArrayList();
 
+    /**
+     * Init
+     * @param url URL
+     * @param resourceBundle ResourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -88,6 +81,9 @@ public class ManageDatabase implements Initializable {
         this.table.setItems(observableList);
     }
 
+    /**
+     * Set cell factory values
+     */
     private void setCellValue() {
         this.name.setCellValueFactory(new PropertyValueFactory<>("name"));
         this.position.setCellValueFactory(new PropertyValueFactory<>("position"));

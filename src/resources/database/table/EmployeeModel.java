@@ -1,14 +1,25 @@
 package resources.database.table;
 
 public class EmployeeModel {
-    private int id;
-    private String name;
-    private String position;
-    private String comment;
-    private String suggestion;
-    private int min_wage;
-    private int rating;
+    /**
+     * ID, Min_wage, rating
+     */
+    private int id, min_wage, rating;
+    /**
+     * Name, Position, Comment, Suggestion
+     */
+    private String name, position, comment, suggestion;
 
+    /**
+     * EmployeeModel Constructor
+     * @param name name
+     * @param position position
+     * @param comment comment
+     * @param suggestion suggestion
+     * @param id id
+     * @param min_wage min wage
+     * @param rating rating
+     */
     public EmployeeModel(String name, String position, String comment, String suggestion, int id, int min_wage, int rating) {
         this.id = id;
         this.name = name;

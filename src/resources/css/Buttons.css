@@ -28,10 +28,29 @@
 #LoginCancelButton: hover,
 #LoginCancelButton: focused,
 #LoginCancelButton: pressed{
-    -fx-text-fill: #000000;
-    -fx-background-color: #065897;
+    -fx-background-color: #1F88FF;
 }
 
 .text-field, .password-field{
     -fx-text-fill: #FFFFFF;
+}
+
+#Button, #LogoutButton{
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 10, 10, 10, 10;
+    -fx-background-insets: 0, 1, 2;
+}
+
+#Button: hover,
+#Button: focused,
+#Button: pressed{
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #0078B9;
+}
+
+#LogoutButton: hover,
+#LogoutButton: focused,
+#LogoutButton: pressed{
+    -fx-text-fill: #202225;
+    -fx-background-color: #ED4245;
 }

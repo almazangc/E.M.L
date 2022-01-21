@@ -21,28 +21,24 @@ import java.util.ResourceBundle;
  * Manages and Modify weekly schedule of employee
  */
 public class Schedule implements Initializable {
-
+    /**
+     * Table
+     */
     @FXML
     private TableView<ScheduleModel> table;
+    /**
+     * Time
+     */
     @FXML
     private TableColumn<ScheduleModel, String> time;
+    /**
+     * Days of the week
+     */
     @FXML
-    private TableColumn<ScheduleModel, String> mon;
-    @FXML
-    private TableColumn<ScheduleModel, String> tue;
-    @FXML
-    private TableColumn<ScheduleModel, String> wed;
-    @FXML
-    private TableColumn<ScheduleModel, String> thu;
-    @FXML
-    private TableColumn<ScheduleModel, String> fri;
-
-    @FXML
-    private TableColumn<ScheduleModel, String> sat;
-
-    @FXML
-    private TableColumn<ScheduleModel, String> sun;
-
+    private TableColumn<ScheduleModel, String> mon, tue, wed, thu, fri, sat, sun;
+    /**
+     * objList
+     */
     private ObservableList<ScheduleModel> observableList = FXCollections.observableArrayList();
 
     @Override
@@ -83,6 +79,9 @@ public class Schedule implements Initializable {
         this.table.setItems(observableList);
     }
 
+    /**
+     * Set cell factory values
+     */
     private void setCellValue() {
         this.time.setCellValueFactory(new PropertyValueFactory<>("TIME"));
         this.mon.setCellValueFactory(new PropertyValueFactory<>("MON"));

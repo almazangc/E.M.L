@@ -33,29 +33,6 @@
     -fx-border-color: transparent;
 }
 
-.button{
-    -fx-background-color:  #000000;
-    -fx-background-color: #FFFFFF;
-    -fx-border-color:  transparent;
-    -fx-background-radius: 10, 10, 10, 10;
-    -fx-background-insets: 0, 1, 2;
-}
-
-.button: hover{
-    -fx-text-fill: #FFFFFF;
-    -fx-background-color: #0078B9;
-}
-
-.button: focused{
-    -fx-text-fill: #FFFFFF;
-    -fx-background-color: #0078B9;
-}
-
-.button: pressed{
-    -fx-text-fill: #FFFFFF;
-    -fx-background-color: #0078B9;
-}
-
 .table-view{
    -fx-background-color: transparent;
 }
@@ -99,3 +76,4 @@
 .table-view .column-header-background{
     -fx-background-color: linear-gradient(from 0.0% 14.299999999999999% to 0.0% 100.0%, #27243dff 0.0%, #01000aff 100.0%);
 }
+

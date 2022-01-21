@@ -101,6 +101,13 @@ public class Login implements javafx.fxml.Initializable {
     }
 
     /**
+     * Check User Biometrics in database
+     */
+    @FXML
+    void biometrics( ) {
+        LoginMessageLabel.setText("Sorry, this is under maintenance");
+    }
+    /**
      * Clear username and password field inputs
      */
     @FXML
