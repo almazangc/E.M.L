@@ -15,12 +15,15 @@ module Employee.Management.System {
      */
     requires java.sql;
 
+    requires com.jfoenix;
+
     opens resources;
     opens resources.controllers;
     opens resources.controllers.dashboardTab;
     opens resources.fxml;
     opens resources.modules;
     opens resources.database;
-    opens resources.css;
     opens resources.database.table;
+    opens resources.css;
+
 }

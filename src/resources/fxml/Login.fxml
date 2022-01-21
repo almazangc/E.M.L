@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -219,38 +220,23 @@
                         <Insets left="10.0" right="10.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0">
+                  <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0">
                      <children>
-                        <Button id="LoginCancelButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#Cancel" style="-fx-background-color: #0984E3;" stylesheets="@../css/Login.css" text="Cancel" textFill="WHITE">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                           <effect>
-                              <DropShadow>
-                                 <color>
-                                    <Color red="0.01568627543747425" green="0.2078431397676468" blue="0.35686275362968445" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <Button id="LoginCancelButton" alignment="CENTER" layoutX="132.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#LoginRequest" style="-fx-background-color: #0984E3;" stylesheets="@../css/Login.css" text="Login" textFill="WHITE">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                           <effect>
-                              <DropShadow>
-                                 <color>
-                                    <Color red="0.01568627543747425" green="0.2078431397676468" blue="0.35686275362968445" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
+                        <JFXButton id="LoginCancelButton" layoutX="100.0" layoutY="13.0" onMouseClicked="#Cancel" stylesheets="@../css/Login.css" text="Cancel" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton id="LoginCancelButton" onMouseClicked="#LoginRequest" stylesheets="@../css/Login.css" text="Login" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding></JFXButton>
                      </children>
                      <VBox.margin>
                         <Insets left="35.0" right="35.0" />
