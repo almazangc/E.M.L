@@ -24,7 +24,7 @@
                            <children>
                               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label alignment="CENTER" text="EMPLOYEE LIST | TAB" textFill="WHITE">
+                                    <Label alignment="CENTER" text="EMPLOYEE PROFILE" textFill="WHITE">
                                        <padding>
                                           <Insets bottom="5.0" left="10.0" top="5.0" />
                                        </padding>
@@ -225,7 +225,7 @@
                                                       <Font name="System Bold" size="12.0" />
                                                    </font></TextField>
                                                 <JFXButton id="Button" layoutX="166.0" layoutY="21.0" onMouseClicked="#nextOnClick" stylesheets="@../../css/Buttons.css" text="&gt;" />
-                                                <JFXButton id="Button" fx:id="edit" layoutX="228.0" layoutY="21.0" onMouseClicked="#editOnClick" stylesheets="@../../css/Buttons.css" text="Modify" />
+                                                <JFXButton id="Button" fx:id="edit" layoutX="228.0" layoutY="21.0" onMouseClicked="#editOnClick" stylesheets="@../../css/Buttons.css" text="Edit" />
                                              </children>
                                              <padding>
                                                 <Insets bottom="5.0" right="10.0" top="10.0" />

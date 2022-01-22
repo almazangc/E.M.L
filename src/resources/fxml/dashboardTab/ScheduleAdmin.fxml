@@ -58,7 +58,7 @@
                            <children>
                               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label alignment="CENTER" text="SCHEDULE | TAB" textFill="WHITE">
+                                    <Label alignment="CENTER" text="MANAGE SCHEDULE" textFill="WHITE">
                                        <padding>
                                           <Insets left="10.0" top="5.0" />
                                        </padding>

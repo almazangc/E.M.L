@@ -43,7 +43,7 @@
 
 .table-view .column-header-background .label{
     -fx-background-color: transparent;
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: #D8D8D8;
 }
 
 .table-view .column-header {
@@ -51,7 +51,7 @@
 }
 
 .table-view .table-cell{
-    -fx-text-fill: white;
+    -fx-text-fill: #D8D8D8;
 }
 
 .table-row-cell{
@@ -75,5 +75,14 @@
 .table-view .column-header-background .filler,
 .table-view .column-header-background{
     -fx-background-color: linear-gradient(from 0.0% 14.299999999999999% to 0.0% 100.0%, #27243dff 0.0%, #01000aff 100.0%);
+}
+
+.text-area {
+-fx-color: #2C2C3E;
+-fx-text-fill: #D8D8D8;
+}
+
+.text-area:focused .content {
+    -fx-background-color:  #2C2C3E;
 }
 

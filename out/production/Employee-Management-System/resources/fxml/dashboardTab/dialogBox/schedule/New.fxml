@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefWidth="400.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245; -fx-background-radius: 10 10 0 0; -fx-border-radius: 10 10 0 0;" stylesheets="@../../../../css/Buttons.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.Login">
+   <top>
+      <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10 10 0 0;" stylesheets="@../../../../css/Buttons.css">
+         <children>
+            <HBox alignment="CENTER_LEFT" stylesheets="@../../../../css/Buttons.css">
+               <children>
+                  <Label text="New Schedule">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../img/logo.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane stylesheets="@../../../../css/Buttons.css" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" stylesheets="@../../../../css/Buttons.css">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <children>
+                  <Button id="CloseButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onMouseClicked="#Close" stylesheets="@../../../../css/Buttons.css" text="" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Marlett" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <cursor>
+            <Cursor fx:constant="MOVE" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </top>
+   <bottom>
+      <Pane prefHeight="5.0" style="-fx-background-color: #ED4245;" stylesheets="@../../../../css/Buttons.css" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <HBox alignment="CENTER" stylesheets="@../../../../css/Buttons.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label layoutX="15.0" layoutY="232.0" text="Time" textFill="#c6edff" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER" spacing="15.0">
+                                 <children>
+                                    <TextField alignment="CENTER" promptText="HH : MM" style="-fx-background-color: #2C2C3E; -fx-border-radius: 10; -fx-background-insets: 0; -fx-border-insets: 0;" stylesheets="@../../../../css/Buttons.css" HBox.hgrow="NEVER">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <Line endX="80.0" startX="-50.0" stroke="WHITE" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Line>
+                           </children>
+                        </VBox>
+                        <JFXRadioButton prefHeight="17.0" prefWidth="52.0" text="AM" textFill="WHITE">
+                           <selectedColor>
+                              <Color green="0.699999988079071" blue="1.0" />
+                           </selectedColor>
+                        </JFXRadioButton>
+                        <JFXRadioButton text="PM" textFill="WHITE">
+                           <selectedColor>
+                              <Color green="0.699999988079071" blue="1.0" />
+                           </selectedColor>
+                        </JFXRadioButton>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </HBox>
+                  <Label layoutX="15.0" layoutY="321.0" text="Monday" textFill="#c6edff" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea prefHeight="50.0" promptText="Enter Schedule Info" styleClass="text-area" stylesheets="@../../../../css/ScrollPane_TableView.css" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextArea>
+                  <Label layoutX="15.0" layoutY="25.0" text="Tuesday" textFill="#c6edff" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea layoutX="15.0" layoutY="115.0" prefHeight="50.0" promptText="Enter Schedule Info" styleClass="text-area" stylesheets="@../../../../css/ScrollPane_TableView.css" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextArea>
+                  <Label layoutX="15.0" layoutY="496.0" text="Wednesday" textFill="#c6edff" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea layoutX="15.0" layoutY="402.0" prefHeight="50.0" promptText="Enter Schedule Info" styleClass="text-area" stylesheets="@../../../../css/ScrollPane_TableView.css" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextArea>
+                  <Label layoutX="15.0" layoutY="579.0" text="Thursday" textFill="#c6edff" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea layoutX="15.0" layoutY="512.0" prefHeight="50.0" promptText="Enter Schedule Info" styleClass="text-area" stylesheets="@../../../../css/ScrollPane_TableView.css" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextArea>
+                  <Label layoutX="15.0" layoutY="662.0" text="Friday" textFill="#c6edff" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea layoutX="15.0" layoutY="622.0" prefHeight="50.0" promptText="Enter Schedule Info" styleClass="text-area" stylesheets="@../../../../css/ScrollPane_TableView.css" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextArea>
+                  <Label layoutX="15.0" layoutY="744.0" text="Saturday" textFill="#c6edff" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea layoutX="15.0" layoutY="663.0" prefHeight="50.0" promptText="Enter Schedule Info" styleClass="text-area" stylesheets="@../../../../css/ScrollPane_TableView.css" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextArea>
+                  <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0">
+                     <children>
+                        <JFXButton id="LoginCancelButton" buttonType="RAISED" layoutX="100.0" layoutY="13.0" onMouseClicked="#Cancel" stylesheets="@../../../../css/Buttons.css" text="Cancel" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton id="LoginCancelButton" buttonType="RAISED" onMouseClicked="#LoginRequest" stylesheets="@../../../../css/Buttons.css" text="Add" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

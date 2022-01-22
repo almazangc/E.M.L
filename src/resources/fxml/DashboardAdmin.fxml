@@ -25,7 +25,7 @@
          <children>
             <ImageView fx:id="MenuList" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#MenuList_onAction" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/list.png" />
+                  <Image url="@../img/logo.jpg" />
                </image>
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
