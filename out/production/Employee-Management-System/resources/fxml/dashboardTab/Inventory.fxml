@@ -45,13 +45,13 @@
                <children>
                   <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../../css/ScrollPane_TableView.css" VBox.vgrow="ALWAYS">
+                        <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../../css/ScrollPane_TableView.css" VBox.vgrow="ALWAYS">
                            <columns>
-                              <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="68.0" text="TYPE" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" text="PRODUCT NAME" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" text="AMOUNT" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" text="COST" />
-                              <TableColumn editable="false" minWidth="-1.0" prefWidth="120.0" text="DESCRIPTION" />
+                              <TableColumn fx:id="type" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="68.0" text="TYPE" />
+                              <TableColumn fx:id="name" editable="false" minWidth="-1.0" prefWidth="120.0" text="PRODUCT NAME" />
+                              <TableColumn fx:id="amount" editable="false" minWidth="-1.0" prefWidth="120.0" text="AMOUNT" />
+                              <TableColumn fx:id="cost" editable="false" minWidth="-1.0" prefWidth="120.0" text="COST" />
+                              <TableColumn fx:id="description" editable="false" minWidth="-1.0" prefWidth="120.0" text="DESCRIPTION" />
                            </columns>
                         </TableView>
                         <HBox alignment="CENTER_RIGHT" spacing="10.0">
