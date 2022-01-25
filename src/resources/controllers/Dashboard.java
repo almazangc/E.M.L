@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -155,7 +154,7 @@ public class Dashboard implements Initializable {
     @FXML
     void comments_ratingOnCLick() {
         ConsoleLog.setConsoleLog("\nLoaded: EmployeeModel Evaluation....");
-        Main.loadUI("CommentsRating" , dashboard_BorderPane);
+        Main.loadUI("Evaluation" , dashboard_BorderPane);
     }
 
     /**

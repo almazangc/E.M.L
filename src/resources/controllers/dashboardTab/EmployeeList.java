@@ -1,19 +1,27 @@
 package resources.controllers.dashboardTab;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import resources.Main;
 import resources.controllers.ConsoleLog;
 import resources.database.DatabaseConnection;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 /**
@@ -120,8 +128,13 @@ public class EmployeeList implements Initializable {
      * Load Edit FXML and initialize contents
      */
     @FXML
-    void editOnClick() {
-
+    void editOnClick() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/dashboardTab/dialogBox/employeeList/Evaluate.fxml")));
+        Scene scene = new Scene(root, Color.TRANSPARENT);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.show();
     }
 
     /**

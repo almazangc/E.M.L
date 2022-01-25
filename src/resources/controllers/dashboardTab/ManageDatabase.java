@@ -93,6 +93,26 @@ public class ManageDatabase implements Initializable {
         this.min_wage.setCellValueFactory(new PropertyValueFactory<>("min_wage"));
         this.rating.setCellValueFactory(new PropertyValueFactory<>("rating"));
     }
+
+    @FXML
+    void deleteOnClick() {
+
+    }
+
+    @FXML
+    void editOnClick() {
+
+    }
+
+    @FXML
+    void newOnClick() {
+
+    }
+
+    @FXML
+    void saveOnClick() {
+
+    }
 }
 
 

@@ -33,7 +33,7 @@ public class Settings implements Initializable {
     private Label sex;
 
     @FXML
-    private Label fullname;
+    private Label fullName;
 
     private static global_variable accountDetails;
 
@@ -41,7 +41,7 @@ public class Settings implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         accountDetails = Main.AccountInfo;
 
-        this.fullname.setText(accountDetails.getCompleteName());
+        this.fullName.setText(accountDetails.getCompleteName());
 
         this.age.setText(Integer.toString(accountDetails.getAge()));
         this.birthdate.setText(accountDetails.getBirthdate());
@@ -50,5 +50,9 @@ public class Settings implements Initializable {
         this.barangay.setText(accountDetails.getBarangay());
         this.municipality.setText(accountDetails.getMunicipality());
         this.province.setText(accountDetails.getProvince());
+    }
+
+    private void ChangePassword(){
+
     }
 }

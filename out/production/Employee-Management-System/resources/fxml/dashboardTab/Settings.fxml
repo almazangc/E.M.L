@@ -27,7 +27,7 @@
                                     <Image url="@../../img/user.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="fullname" style="-fx-text-fill: #000000;" text="Firstname MI. Lastname" textFill="#1a1a25">
+                              <Label fx:id="fullName" style="-fx-text-fill: #000000;" text="Firstname MI. Lastname" textFill="#1a1a25">
                                  <font>
                                     <Font name="System Bold" size="21.0" />
                                  </font>
