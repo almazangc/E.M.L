@@ -308,7 +308,7 @@ public class global_variable {
         return postalCode;
     }
     /**
-     * Sout information gotta remove later
+     * Display information gotta remove later
      */
     public void displayAllUserInformation(){
         ConsoleLog.setConsoleLog("\nAccount Details" +
