@@ -1,0 +1,11 @@
+module:Employee.Management.System
+resources
+resources.controllers
+resources.controllers.dashboardTab
+resources.controllers.dashboardTab.dialogBox.employeeList
+resources.controllers.dashboardTab.dialogBox.foodMenu
+resources.controllers.dashboardTab.dialogBox.inventory
+resources.controllers.dashboardTab.dialogBox.schedule
+resources.database
+resources.database.table
+resources.modules
