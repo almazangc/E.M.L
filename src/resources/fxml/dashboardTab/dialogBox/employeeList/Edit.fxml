@@ -22,7 +22,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefWidth="400.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245; -fx-background-radius: 10 10 0 0; -fx-border-radius: 10 10 0 0;" stylesheets="@../../../../css/Buttons.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.Dashboard">
+<BorderPane prefWidth="400.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245; -fx-background-radius: 10 10 0 0; -fx-border-radius: 10 10 0 0;" stylesheets="@../../../../css/Buttons.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.dashboardTab.dialogBox.employeeList.Edit">
    <top>
       <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10 10 0 0;" stylesheets="@../../../../css/Buttons.css">
          <children>
@@ -143,7 +143,7 @@
                   </HBox>
                   <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0">
                      <children>
-                        <JFXButton id="LoginCancelButton" buttonType="RAISED" onMouseClicked="#Cancel" stylesheets="@../../../../css/Buttons.css" text="SELECT IMAGE FROM FILE" textFill="WHITE">
+                        <JFXButton id="LoginCancelButton" buttonType="RAISED" stylesheets="@../../../../css/Buttons.css" text="SELECT IMAGE FROM FILE" textFill="WHITE">
                            <padding>
                               <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                            </padding>
@@ -542,7 +542,7 @@
                   </HBox>
                   <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0">
                      <children>
-                        <JFXButton id="LoginCancelButton" buttonType="RAISED" layoutX="100.0" layoutY="13.0" onMouseClicked="#Cancel" stylesheets="@../../../../css/Buttons.css" text="Cancel" textFill="WHITE">
+                        <JFXButton id="LoginCancelButton" buttonType="RAISED" layoutX="100.0" layoutY="13.0" stylesheets="@../../../../css/Buttons.css" text="Cancel" textFill="WHITE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -553,7 +553,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton id="LoginCancelButton" buttonType="RAISED" onMouseClicked="#LoginRequest" stylesheets="@../../../../css/Buttons.css" text="Save Changes" textFill="WHITE">
+                        <JFXButton id="LoginCancelButton" buttonType="RAISED" stylesheets="@../../../../css/Buttons.css" text="Save Changes" textFill="WHITE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>

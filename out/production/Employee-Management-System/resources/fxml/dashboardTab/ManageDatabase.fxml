@@ -58,10 +58,10 @@
                         </TableView>
                         <HBox alignment="CENTER_RIGHT" spacing="10.0">
                            <children>
-                              <JFXButton id="Button" buttonType="RAISED" onMouseClicked="#newOnClick" stylesheets="@../../css/Buttons.css" text="NEW" />
-                              <JFXButton id="LogoutButton" buttonType="RAISED" layoutX="498.0" layoutY="21.0" onMouseClicked="#deleteOnClick" stylesheets="@../../css/Buttons.css" text="DELETE" />
-                              <JFXButton id="Button" buttonType="RAISED" layoutX="498.0" layoutY="21.0" onMouseClicked="#editOnClick" stylesheets="@../../css/Buttons.css" text="EDIT" />
-                              <JFXButton id="Button" buttonType="RAISED" layoutX="498.0" layoutY="21.0" onMouseClicked="#saveOnClick" stylesheets="@../../css/Buttons.css" text="SAVE" />
+                              <JFXButton id="Button" buttonType="RAISED" onMouseClicked="#newEmployee" stylesheets="@../../css/Buttons.css" text="NEW" />
+                              <JFXButton id="LogoutButton" buttonType="RAISED" layoutX="498.0" layoutY="21.0" stylesheets="@../../css/Buttons.css" text="DELETE" />
+                              <JFXButton id="Button" buttonType="RAISED" layoutX="498.0" layoutY="21.0" onMouseClicked="#editEmployee" stylesheets="@../../css/Buttons.css" text="EDIT" />
+                              <JFXButton id="Button" buttonType="RAISED" layoutX="498.0" layoutY="21.0" stylesheets="@../../css/Buttons.css" text="SAVE" />
                            </children>
                            <padding>
                               <Insets bottom="5.0" right="10.0" top="10.0" />

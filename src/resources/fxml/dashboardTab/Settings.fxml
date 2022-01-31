@@ -138,7 +138,7 @@
                            <children>
                               <HBox alignment="CENTER_RIGHT" spacing="10.0">
                                  <children>
-                                    <JFXButton id="Button" buttonType="RAISED" stylesheets="@../../css/Buttons.css" text="CHANGE PASSCODE" />
+                                    <JFXButton id="Button" buttonType="RAISED" onMouseClicked="#changePasscode" stylesheets="@../../css/Buttons.css" text="CHANGE PASSCODE" />
                                  </children>
                                  <padding>
                                     <Insets bottom="5.0" right="10.0" top="10.0" />

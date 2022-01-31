@@ -14,15 +14,21 @@ module Employee.Management.System {
      * Sql lite jdbc
      */
     requires java.sql;
-
+    /**
+     * JFOENIX STYLE
+     */
     requires com.jfoenix;
 
     opens resources;
-    opens resources.controllers;
-    opens resources.controllers.dashboardTab;
     opens resources.fxml;
     opens resources.modules;
+    opens resources.css;
     opens resources.database;
     opens resources.database.table;
-    opens resources.css;
+    opens resources.controllers;
+    opens resources.controllers.dashboardTab;
+    opens resources.controllers.dashboardTab.dialogBox.employeeList;
+    opens resources.controllers.dashboardTab.dialogBox.foodMenu;
+    opens resources.controllers.dashboardTab.dialogBox.inventory;
+    opens resources.controllers.dashboardTab.dialogBox.schedule;
 }

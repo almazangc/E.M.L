@@ -1,12 +1,20 @@
 package resources.controllers.dashboardTab;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import resources.Main;
 import resources.modules.global_variable;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 /**
@@ -52,7 +60,16 @@ public class Settings implements Initializable {
         this.province.setText(accountDetails.getProvince());
     }
 
-    private void ChangePassword(){
+    public static Stage newStage;
 
+    @FXML
+    void changePasscode() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/dashboardTab/dialogBox/ChangePasscode.fxml")));
+        Scene scene = new Scene(root, Color.TRANSPARENT);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        newStage = stage;
+        stage.show();
     }
 }

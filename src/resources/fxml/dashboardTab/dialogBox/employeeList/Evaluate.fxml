@@ -19,7 +19,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="dashboard_BorderPane" prefWidth="400.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245; -fx-background-radius: 10 10 0 0; -fx-border-radius: 10 10 0 0;" stylesheets="@../../../../css/Buttons.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.Dashboard">
+<BorderPane fx:id="dashboard_BorderPane" prefWidth="400.0" style="-fx-background-color: #2C2C3E; -fx-border-color: #ED4245; -fx-background-radius: 10 10 0 0; -fx-border-radius: 10 10 0 0;" stylesheets="@../../../../css/Buttons.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.controllers.dashboardTab.dialogBox.employeeList.Evaluate">
    <top>
       <HBox fx:id="TitleBar" alignment="CENTER_LEFT" prefHeight="25.0" style="-fx-background-color: #282839; -fx-background-radius: 10 10 0 0;" stylesheets="@../../../../css/Buttons.css">
          <children>

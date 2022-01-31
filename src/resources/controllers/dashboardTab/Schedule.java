@@ -1,20 +1,30 @@
 package resources.controllers.dashboardTab;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import resources.Main;
 import resources.database.DatabaseConnection;
 import resources.database.table.ScheduleModel;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 /**
@@ -36,6 +46,12 @@ public class Schedule implements Initializable {
      */
     @FXML
     private TableColumn<ScheduleModel, String> mon, tue, wed, thu, fri, sat, sun;
+
+    @FXML
+    private JFXButton editSchedule;
+
+    @FXML
+    private JFXButton newSchedule;
     /**
      * objList
      */
@@ -92,4 +108,29 @@ public class Schedule implements Initializable {
         this.sat.setCellValueFactory(new PropertyValueFactory<>("SAT"));
         this.sun.setCellValueFactory(new PropertyValueFactory<>("SUN"));
     }
+
+    public static Stage newStage;
+
+    @FXML
+    void editSchedule() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/dashboardTab/dialogBox/schedule/Edit.fxml")));
+        Scene scene = new Scene(root, Color.TRANSPARENT);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        newStage = stage;
+        stage.show();
+    }
+
+    @FXML
+    void newSchedule() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/dashboardTab/dialogBox/schedule/New.fxml")));
+        Scene scene = new Scene(root, Color.TRANSPARENT);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        newStage = stage;
+        stage.show();
+    }
+
 }

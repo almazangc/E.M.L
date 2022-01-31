@@ -3,19 +3,28 @@ package resources.controllers.dashboardTab;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import resources.Main;
 import resources.database.DatabaseConnection;
 import resources.database.table.FoodMenuModel;
 import resources.database.table.InventoryModel;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 /**
@@ -73,5 +82,29 @@ public class Inventory implements Initializable {
         this.amount.setCellValueFactory(new PropertyValueFactory<>("name"));
         this.cost.setCellValueFactory(new PropertyValueFactory<>("type"));
         this.description.setCellValueFactory(new PropertyValueFactory<>("description"));
+    }
+
+    public static Stage newStage;
+
+    @FXML
+    void editItem() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/dashboardTab/dialogBox/inventory/Edit.fxml")));
+        Scene scene = new Scene(root, Color.TRANSPARENT);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        newStage = stage;
+        stage.show();
+    }
+
+    @FXML
+    void newItem() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/dashboardTab/dialogBox/inventory/New.fxml")));
+        Scene scene = new Scene(root, Color.TRANSPARENT);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        newStage = stage;
+        stage.show();
     }
 }

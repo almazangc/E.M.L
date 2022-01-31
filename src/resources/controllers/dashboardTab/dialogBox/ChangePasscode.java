@@ -1,4 +1,4 @@
-package resources.controllers.dashboardTab.dialogBox.schedule;
+package resources.controllers.dashboardTab.dialogBox;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -6,13 +6,13 @@ import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import resources.controllers.dashboardTab.Inventory;
-import resources.controllers.dashboardTab.Schedule;
+import resources.controllers.dashboardTab.ManageDatabase;
+import resources.controllers.dashboardTab.Settings;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Edit   implements Initializable {
+public class ChangePasscode implements Initializable {
 
     /**
      * Use to get and set mouse location on screen for dragging application
@@ -33,8 +33,8 @@ public class Edit   implements Initializable {
         });
 
         TitleBar.setOnMouseDragged(event -> {
-            Schedule.newStage.setX(event.getScreenX() - xOffset);
-            Schedule.newStage.setY(event.getScreenY() - yOffset);
+            Settings.newStage.setX(event.getScreenX() - xOffset);
+            Settings.newStage.setY(event.getScreenY() - yOffset);
         });
     }
 

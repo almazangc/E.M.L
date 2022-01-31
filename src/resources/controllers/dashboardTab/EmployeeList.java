@@ -124,18 +124,6 @@ public class EmployeeList implements Initializable {
         }
     }
 
-    /**
-     * Load Edit FXML and initialize contents
-     */
-    @FXML
-    void editOnClick() throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/dashboardTab/dialogBox/employeeList/Evaluate.fxml")));
-        Scene scene = new Scene(root, Color.TRANSPARENT);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.initStyle(StageStyle.TRANSPARENT);
-        stage.show();
-    }
 
     /**
      * Traverse forward by +1 Current ID and display the account details
@@ -188,4 +176,19 @@ public class EmployeeList implements Initializable {
         }
     }
 
+    public static Stage newStage;
+
+    /**
+     * Load Edit FXML and initialize contents
+     */
+    @FXML
+    void editOnClick() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/dashboardTab/dialogBox/employeeList/Evaluate.fxml")));
+        Scene scene = new Scene(root, Color.TRANSPARENT);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        newStage = stage;
+        stage.show();
+    }
 }
